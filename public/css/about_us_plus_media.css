@@ -1,0 +1,163 @@
+.page_title_glav_block {
+    padding-top: 250px;
+    margin-bottom: 88px;
+}
+
+/* gigs miks section */
+.gigs_miks {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 85px;
+    margin-bottom: 100px;
+}
+.gigs_miks_photo_block {
+    max-width: 682px;
+    width: 100%;
+    height: 438px;
+    position: relative;
+}
+.loader_gigs {
+    width: 178px;
+    height: auto;
+    position: absolute;
+    right: -89px;
+    bottom: -89px;
+    z-index: 3;
+    animation-name: load;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes load { 
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(36deg);
+    }
+    20% {
+        transform: rotate(72deg);
+    }
+    30% {
+        transform: rotate(108deg);
+    }
+    40% {
+        transform: rotate(144deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    60% {
+        transform: rotate(216deg);
+    }
+    70% {
+        transform: rotate(252deg);
+    }
+    80% {
+        transform: rotate(288deg);
+    }
+    90% {
+        transform: rotate(324deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.gigs_miks_text_block  {
+    max-width: 683px;
+    width: 100%;
+}
+.gigs_miks_text_title_blue {
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    color: #21BEB3;
+    background: -webkit-linear-gradient(left ,#21BEB3, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gigs_miks_text_normal {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 37px;
+}
+.gigs_miks_btn {
+    display: none;
+    width: 198px;
+    height: 56px;
+    background-color: #21BEB3;
+    border: 1px solid #21BEB3;
+    margin-top: 35px;
+}
+.gigs_miks_btn:hover {
+    background-color: transparent;
+    border: 1px solid #21BEB3;
+}
+.gigs_miks_btn:hover a {
+    color: #21BEB3;
+}
+.gigs_miks_btn a {
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+/* gigs miks section end */
+
+
+
+.info_text_block {
+    row-gap: 43px;
+    margin-bottom: 150px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .gigs_miks {
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .gigs_miks_photo_block {
+        max-width: none;
+    }
+    .gigs_miks_text_block {
+        margin-top: 30px;
+        max-width: none;
+        font-size: 16px;
+    }
+    .gigs_miks_text_normal {
+        font-size: 16px;
+    }
+    .gigs_miks_text_title_blue {
+        text-align: center;
+        font-size: 45px;
+    }
+    .info_text_block {
+        margin-bottom: 60px;
+    }
+    .page_title_glav_block {
+        padding-top: 100px;
+        margin-bottom: 50px;
+    }
+    .loader_gigs {
+        display: none;
+    }
+    .gigs_miks_text_normal {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:380px) {
+    .gigs_miks_text_title_blue {
+        font-size: 25px;
+    }
+    .gigs_miks {
+        margin-bottom: 0;
+    }
+}

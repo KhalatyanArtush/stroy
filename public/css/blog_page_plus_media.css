@@ -1,0 +1,18 @@
+.news_blog_section_list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+}
+.list_next_blog_news_block {
+    margin-top: 58px;
+    margin-bottom: 180px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .list_next_blog_news_block {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+}

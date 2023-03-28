@@ -1,0 +1,131 @@
+.video_page_section_list {
+    display: flex;
+    row-gap: 60px;
+    column-gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.video_block {
+    max-width: 397px;
+    height: auto;
+    position: relative;
+    opacity: .3;
+}
+.video_block:hover {
+    opacity: 1;
+    transition: all 300ms ease-out;
+}
+.video_block .video_photo_block span svg path {
+    transition: all 300ms ease-out;
+}
+.video_block:hover .video_photo_block span svg path {
+    fill: #21BEB3;
+    transition: all 300ms ease-in;
+}
+.video_photo_block {
+    height: 245px;
+    width: 100%;
+}
+.video_photo_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.video_photo_block span {
+    position: absolute;
+}
+.interview_date_block {
+    margin-bottom: 10px;
+}
+.text_title_info_block p {
+    margin-bottom: 15px;
+}
+.blog_news_text_block {
+    margin-top: 20px;
+}
+.interview_date_block, .interview_time_block {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #B1B1B1;
+}
+.text_title_info_block p {
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.text_title_info_block span {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.list_next_blog_news_block {
+    margin-top: 58px;
+    margin-bottom: 180px;
+}
+.date_time_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.interview_time_block {
+    display: none;
+}
+@media screen and (max-width:1024px) {
+    .interview_time_block {
+        display: block;
+    }
+    .list_next_blog_news_block {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+    .video_block {
+        opacity: 1;
+    }
+    .blog_news_text_block {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:843px) {
+    .video_block:nth-child(even) {
+        margin-left: auto;
+    }
+    .video_page_section_list  {
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+}
+@media screen and (max-width:420px) {
+    .video_block {
+        max-width: 307px;
+    }
+    .video_photo_block {
+        height: 190px;
+    }
+    .text_title_info_block p {
+        font-size: 20px;
+    }
+    .interview_date_block, .interview_time_block {
+        font-size: 15px;
+    }
+    .text_title_info_block span {
+        font-size: 18px;
+    }
+    
+    .galery_block {
+        max-width: 398px;
+    }
+    .galery_block a .video_photo_block {
+        height: 245px;
+    }
+    .galery_block:nth-child(even) {
+        margin-left: auto;
+    }
+}

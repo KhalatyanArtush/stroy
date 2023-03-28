@@ -1,0 +1,362 @@
+.music_page_section_list {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    column-gap: 30px;
+    row-gap: 60px;
+}
+.music_block {
+    cursor: pointer;
+    max-width: 825px;
+    width: 100%;
+    height: auto;
+}
+.music_photo_block {
+    height: 508px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music_photo_playsvg_block {
+    position: absolute;
+}
+.music_info_title {
+    margin: 30px 0;
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 57px;
+    color: #FFFFFF;
+}
+.music_info_text_grey {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    color: #B1B1B1;
+    margin-right: 37px;
+}
+.music_info_text_white {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: white;
+}
+.music_hover_block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 300ms ease-out;
+    background-color: rgba(33, 190, 179, 0.4);;
+}
+.phto_block_date {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+.phto_block_date span {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.music_block:hover .music_hover_block {
+    transition: all 300ms ease-in;
+    opacity: 1;
+}
+.music_block:nth-child(even) {
+    margin-top: 45px;
+}
+
+
+.list_next_blog_news_block {
+    margin-top: 58px;
+    margin-bottom: 180px;
+}
+
+
+
+.music_page_slider_block {
+    margin-bottom: 180px;
+}
+.general_min_title {
+    margin-bottom: 0;
+    text-align: center;
+}
+.slider_info_block {
+    text-align: center;
+}
+.slider_info_white {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+.slider_info_blue {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    color: #21BEB3;
+    margin-left: 5px;
+}
+.releases_section_albom {
+    width: 398px;
+}
+.releases_section_albom_photo {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* carusel */
+#carousel {
+    position: relative;
+    height: 485px;
+    overflow: hidden;
+}
+#carousel #carusel_div {
+    position: absolute;
+    transition: all 500ms ease-out;
+    margin:  0 25px;
+}
+#carousel #carusel_div img {
+    transition: width 1s;
+}
+.hideLeft {
+    overflow: hidden;
+    left: 0%;
+    opacity: 0;
+    transform: translateY(58%) translateX(-100%);
+    width: 248px;
+    height: 200px;
+}
+.hideRight {
+    overflow: hidden;
+    left: 100%;
+    opacity: 0;
+    transform: translateY(58%) translateX(0);
+    width: 248px;
+    height: 0;
+    height: 200px;
+}
+.prev {
+    opacity: .8;
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-66%);
+    width: 295px;
+    height: 374px;
+}
+.prevLeftSecond {
+    opacity: .6;
+    z-index: 4;
+    left: 15%;
+    transform: translateY(25%) translateX(-90%);
+    width: 248px;
+    height: 321px;
+}
+.selected {
+    height: 485px;
+    width: 398px;
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+}
+.next {
+    opacity: .8;
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-33%);
+    width: 295px;
+    height: 374px;
+}
+.nextRightSecond {
+    opacity: .6;
+    z-index: 4;
+    left: 85%;
+    transform: translateY(25%) translateX(-8%);
+    width: 248px;
+    height: 321px;
+}
+.buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -75px;
+    display: flex;
+    align-items: center;
+}
+#prev , #next {
+    border: 1px solid #21BEB3;
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease-out;
+    justify-content: center;
+}
+#prev:hover {
+    border: 1px solid #21BEB3;
+    background-color: #21BEB3;
+    transition: all 300ms ease-in;
+}
+#prev:hover svg path {
+    stroke: white;
+    transition: all 300ms ease-in;
+}
+#prev svg path , #next svg path {
+    transition: all 300ms ease-out;
+}
+#next:hover {
+    border: 1px solid #21BEB3;
+    background-color: #21BEB3;
+    transition: all 300ms ease-in;
+}
+#next:hover svg path {
+    stroke: white;
+    transition: all 300ms ease-in;
+}
+
+.selected .releases_section_albom_photo {
+    height: 399px;
+}
+.prev .releases_section_albom_photo {
+    height: 295px;
+}
+.next .releases_section_albom_photo {
+    height: 295px;
+}
+.prev .releases_section_albom_name_block p {
+    font-size: 23px;
+}
+.prev .releases_section_albom_name_block span {
+    font-size: 18px;
+}
+.next .releases_section_albom_name_block p {
+    font-size: 23px;
+}
+.next .releases_section_albom_name_block span {
+    font-size: 18px;
+}
+.prevLeftSecond .releases_section_albom_photo {
+    height: 248px;
+}
+.nextRightSecond .releases_section_albom_photo {
+    height: 248px;
+}
+.prevLeftSecond .releases_section_albom_name_block p {
+    font-size: 20px;
+}
+.prevLeftSecond .releases_section_albom_name_block span {
+    font-size: 16px;
+}
+.nextRightSecond .releases_section_albom_name_block p {
+    font-size: 20px;
+}
+.nextRightSecond .releases_section_albom_name_block span {
+    font-size: 16px;
+}
+
+
+.slider_music {
+    margin-top: 35px;
+    position: relative;
+}
+
+
+#carusel_div:hover .releases_hov {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+    .music_page_slider_block {
+        margin-bottom: 115px;
+    }
+    .general_min_title {
+        font-size: 45px;
+    }
+    .slider_info_white , .slider_info_blue {
+        font-size: 25px;
+    }
+    .list_next_blog_news_block {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+    .music_info_title {
+        font-size: 20px;
+    }
+    .music_info_text_grey {
+        margin-right: 15px;
+    }
+    .music_info_text_grey, .music_info_text_white {
+        font-size: 16px;
+    }
+    .music_photo_block {
+        height: 186px;
+    }
+    .music_photo_playsvg_block svg {
+        width: 63px;
+        height: 63px;
+    }
+    .phto_block_date span {
+        font-size: 10px;
+    }
+    .music_page_section_list {
+        row-gap: 30px;
+    }
+}
+@media screen and (max-width:768px) {
+    .music_page_section_list {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .music_block {
+        max-width: 302px;
+    }
+    .music_block:nth-child(even) {
+        margin-top: 0;
+        margin-left: auto;
+    }
+    .releases_section_albom_photo {
+        width: 100%!important;
+    }
+}

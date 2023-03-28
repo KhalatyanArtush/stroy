@@ -1,0 +1,215 @@
+.wrapper_blog_item {
+    margin: 0 390px;
+}
+.blog_item_title_block {
+    padding-top: 200px;
+    margin-bottom: 48px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.blog_item_title_block h1 {
+    font-family: "montserrat_bold";
+    margin-bottom: 48px;
+    font-size: 45px;
+    background: -webkit-linear-gradient(left ,#21BEB3, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.blog_item_title_block span {
+    font-family: "montserrat_medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29px;
+    color: #B1B1B1;
+}
+.blog_item_info_block {
+    width: 100%;
+    margin-bottom: 120px;
+}
+.item_photo_block {
+    height: 509px;
+    margin-bottom: 76px;
+}
+.item_btn_block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.item_text_block p {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+.item_btn_block button {
+    width: 220px;
+    height: 60px;
+    border: 1px solid #21BEB3;
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.item_btn_block button:hover {
+    background-color: #21BEB3;
+}
+.item_btn_block button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_left a svg {
+    margin-right: 15px;
+}
+.btn_right a svg {
+    margin-left: 15px;
+}
+.item_share_block {
+    display: flex;
+    column-gap: 33px;
+}
+.item_share_block span {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+.item_share_block a svg path {
+    transition: all 300ms ease-out;
+}
+.item_share_block a:hover svg path {
+    fill: #21BEB3;
+    transition: all 300ms ease-in;
+}
+.for_media {
+    display: none;
+}
+.item_btn_block_bottom {
+    width: 100%;
+    column-gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.news_blog_section_list {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+.blog_news_block {
+    max-width: 540px;
+}
+.blog_news_photo_block {
+    max-width: 540px;
+    height: 354px;
+}
+.text_title_info_block p {
+    font-size: 29px;
+}
+
+
+
+
+@media screen and (max-width:1440px) {
+    .wrapper_blog_item {
+        margin: 0 150px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .wrapper_blog_item {
+        margin: 0 10px;
+    }
+    .blog_item_title_block {
+        padding-top: 100px;
+        margin-bottom: 30px;
+    }
+    .blog_item_title_block h1 {
+        margin-bottom: 20px;
+        font-size: 38px;
+    }
+    .item_photo_block {
+        height: 258px;
+        margin-bottom: 30px;
+    }
+    .item_text_block p {
+        margin-bottom: 20px;
+    }
+    .blog_item_title_block span {
+        font-size: 20px;
+    }
+    .item_text_block p {
+        font-size: 16px;
+    }
+    .item_btn_block button {
+        width: 187px;
+        height: 56px;
+    }
+    .blog_item_info_block {
+        margin-bottom: 60px;
+    }
+    .item_btn_block {
+        margin-bottom: 60px;
+    }
+    .text_title_info_block p {
+        font-size: 20px;
+    }
+    .text_title_info_block span {
+        font-size: 16px;
+    }
+    .interview_date_block span {
+        font-size: 15px;
+    }
+    .interview_date_block a {
+        font-size: 20px;
+    }
+    .interview_date_block {
+        margin-bottom: 15px;
+    }
+    .news_blog_section_list {
+        margin-bottom: 51px;
+    }
+    .blog_news_photo_block {
+        height: 258px;
+    }
+    .news_blog_section_list {
+        align-items: center;
+        row-gap: 30px;
+    }
+}
+@media screen and (max-width:768px) {
+    .item_share_block {
+        display: none;
+    }
+    .for_media {
+        display: flex;
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width:380px) {
+    .blog_item_title_block h1 {
+        font-size: 25px;
+    }
+    .blog_item_title_block span {
+        font-size: 16px;
+    }
+    .item_text_block p {
+        font-size: 12px;
+    }
+    .item_share_block {
+        column-gap: 15px;
+    }
+    .item_btn_block button {
+        font-size: 12px;
+    }
+}

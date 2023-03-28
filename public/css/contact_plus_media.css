@@ -1,0 +1,289 @@
+.page_title_glav_block {
+    padding-top: 250px;
+}
+.contact_page_block {
+    margin: 250px 0;
+}
+.phone_mail_time_block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.back_info_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+.back_info_block a:hover {
+    color: white;
+}
+.back_info_block a {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: #22BEB3;
+}
+.back_info_block p {
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: #22BEB3;
+}
+.contact_form_map_block {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 28px;
+}
+.contact_form_blok {
+    max-width: 827px;
+    width: 100%;
+}
+.contact_form_blok form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+}
+.contact_form_blok h3 {
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    color: #FFFFFF;
+}
+textarea {
+    padding: 20px;
+    width: 100%;
+    height: 142px;
+    background-color: transparent;
+    resize: none;
+    font-size: 16px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+}
+.phone_form_block {
+    margin: 15px 0;
+}
+.name_form_block {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.name_form_block input {
+    padding: 20px;
+    background-color: transparent;
+    max-width: 400px;
+    width: 100%;
+    height: 56px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+.phone_form_block {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.number_inp {
+    padding: 20px;
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+.number_inp::-webkit-outer-spin-button,
+.number_inp::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.number_inp[type=number] {
+  -moz-appearance: textfield;
+}
+.contact_form_blok button {
+    width: max-content;
+}
+.contact_form_blok button input {
+    width: 220px;
+    height: 60px;
+    background-color: #21BEB3;
+    border: 1px solid #21BEB3;
+    font-family: "montserrat_bold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 37px;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 5px;
+}
+.contact_form_blok button input:hover {
+    background-color: transparent;
+    border: 1px solid #21BEB3;
+    color: #FFFFFF;
+    transition: all 300ms ease-in;
+}
+.ymaps-2-1-78-map {
+    width: 100%!important;
+}
+.contact_page_map_block {
+    border-radius: 5px;
+}
+
+
+
+.custom-select {
+    width: 90px;
+    position: relative;
+}
+.custom-select select {
+    display: none;
+}
+.select-selected {
+    width: 94px;
+    height: 56px;
+    background-color: transparent;
+    font-family: "montserrat_light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 26px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: white transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent white transparent;
+    top: 15px;
+}
+.select-items div,.select-selected {
+    color: white;
+    padding: 7px 7px;
+    cursor: pointer;
+    user-select: none;
+}
+.select-items {
+    position: absolute;
+    background-color: #21BEB3;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    max-height: 180px;
+    overflow: auto;
+}
+.select-items::-webkit-scrollbar {
+    width: 6px;
+}
+.select-items::-webkit-scrollbar-thumb {
+    background-color: white; 
+    border-radius: 5px;
+}
+.select-hide {
+    display: none;
+}
+.select-items div:hover, .same-as-selected {
+    background-color: #229189;
+}
+.contact_map_blok {
+    width: 100%;
+}
+.contact_page_map_block {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width:1024px) {
+    .phone_mail_time_block {
+        justify-content: space-between;
+    }
+    .page_title_glav_block {
+        padding-top: 100px;
+    }
+    .contact_page_block {
+        margin: 50px 0 100px;
+    }
+    .phone_mail_time_block {
+        margin-bottom: 50px;
+    }
+    .contact_form_map_block {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .contact_form_blok {
+        max-width: none;
+    }
+    .name_form_block input {
+        max-width: 475px;
+    }
+    .contact_form_blok button {
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:768px) {
+    .back_info_block {
+        row-gap: 20px;
+    }
+    .back_info_block span svg {
+        width: 35px;
+        height: 35px;
+    }
+    .back_info_block a {
+        font-size: 16px;
+    }
+    .contact_form_blok h3 {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:490px) {
+    .phone_mail_time_block {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .name_form_block {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .contact_form_blok button input {
+        margin-top: 15px;
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .contact_form_blok h3 {
+        font-size: 18px;
+    }
+    .name_form_block input , .number_inp , textarea {
+        font-size: 12px;
+    }
+    .select-selected {
+        font-size: 12px;
+    }
+}
