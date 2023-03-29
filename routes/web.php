@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 //Route::get('/', function () {
 //    return view('index')->name('index');
 //});
+Route::get('/homes', [App\Http\Controllers\HomeController::class, 'index'])->name('homes');
 
 
 Route::get('/', [App\Http\Controllers\IndexController::class, '__invoke'])->name('index');
@@ -57,25 +58,25 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 //    });
 //
 //    Route::group(['namespace' => 'Agent'], function () {
-    Route::get('/contact', [App\Http\Controllers\Admin\IndexController::class, 'contact'])->name('admin.contact.index');
-//        Route::get('/agent/creat', 'CreatController')->name('admin.agent.creat');
-//        Route::post('/agent', 'StoreController')->name('admin.agent.store');
-//        Route::get('/agent/{agent}', 'ShowController')->name('admin.agent.show');
-//        Route::get('/agent/{agent}/edit', 'EditController')->name('admin.agent.edit');
-//        Route::patch('/agent/{agent}', 'UpdateController')->name('admin.agent.update');
-//        Route::delete('/agent/{agent}', 'DestroyController')->name('admin.agent.delete');
-//
+    Route::get('/contact', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
+        Route::get('/contact/creat', [App\Http\Controllers\Admin\ContactController::class, 'creat'])->name('admin.contact.creat');
+        Route::post('/contact', [App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
+        Route::get('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'show'])->name('admin.contact.show');
+        Route::get('/contact/{contact}/edit', [App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('admin.contact.edit');
+        Route::patch('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
+        Route::delete('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'delete'])->name('admin.contact.delete');
+
 //    });
 //
 //    Route::group(['namespace' => 'BuildingType'], function () {
     Route::get('/services', [App\Http\Controllers\Admin\ServiceController::class, 'index'])->name('admin.services.index');
-//        Route::get('/buildingType/creat', 'CreatController')->name('admin.buildingType.creat');
-//        Route::post('/buildingType', 'StoreController')->name('admin.buildingType.store');
-//        Route::get('/buildingType/{buildingType}', 'ShowController')->name('admin.buildingType.show');
-//        Route::get('/buildingType/{buildingType}/edit', 'EditController')->name('admin.buildingType.edit');
-//        Route::patch('/buildingType/{buildingType}', 'UpdateController')->name('admin.buildingType.update');
-//        Route::delete('/buildingType/{buildingType}', 'DestroyController')->name('admin.buildingType.delete');
-//
+        Route::get('/service/creat', [App\Http\Controllers\Admin\ServiceController::class, 'creat'])->name('admin.service.creat');
+        Route::post('/service', [App\Http\Controllers\Admin\ServiceController::class, 'store'])->name('admin.service.store');
+        Route::get('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'show'])->name('admin.service.show');
+        Route::get('/service/{service}/edit', [App\Http\Controllers\Admin\ServiceController::class, 'edit'])->name('admin.service.edit');
+        Route::patch('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'update'])->name('admin.service.update');
+        Route::delete('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'delete'])->name('admin.service.delete');
+
 //    });
 //
 //    Route::group(['namespace' => 'BuyRent'], function () {
@@ -221,4 +222,3 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

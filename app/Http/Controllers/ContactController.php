@@ -11,9 +11,9 @@ class ContactController extends Controller
 public function __invoke(){
 
     $home = Home::first();
-    $contacts = Contact::first();
+    $contact = Contact::first();
 
-    return view('contacts',compact('contacts','home'));
+    return view('contacts',compact('contact','home'));
 
     }
 }

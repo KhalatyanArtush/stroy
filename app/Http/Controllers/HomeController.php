@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
-use App\Models\Home;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -24,11 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $home = Home::first();
-        $about = About::first();
+        return redirect()->route('home');
 
-        return view('about',compact('about','home'));
-        return redirect('/admin/posts');
-
+        return redirect('home');
+//        return view('admin.posts.index');
     }
 }

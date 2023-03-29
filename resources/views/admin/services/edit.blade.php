@@ -7,39 +7,66 @@
             @csrf
             @method('patch')
 
+            <div class="form-add">
 
-            <div class="row mb-3">
-                <label for="staticEmail" class="col-sm-2 col-form-label">վերնագիր</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="tel" value="{{ $contact->tel }}">
+                <div class="row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.header title')}}</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="header_title">
+                    </div>
                 </div>
-            </div>
 
-
-
-            <div class="row mb-3">
-                <label for="staticEmail" class="col-sm-2 col-form-label">lat</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="lat" value="{{ $contact->lat }}">
+                <div class="row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.title')}}</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="title">
+                    </div>
                 </div>
-            </div>
 
-            <div class="row mb-3">
-                <label for="staticEmail" class="col-sm-2 col-form-label">long</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="long" value="{{ $contact->long }}">
+                <div class="row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.text')}}</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="text">
+                    </div>
                 </div>
-            </div>
+                <div class="row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.image title')}}</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="image_title">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.image text')}}</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="image_text">
+                    </div>
+                </div>
+
+                {{--  image for home page  --}}
+                <div style="width: 14rem;">
+                    <label class="form-label" for="customFile">{{ __('index.Add img in home' )}}</label>
+                    <input type="file" class="form-control" id="customFile" name="img">
+                </div>
+
+                {{--  images for single page  --}}
+                <div style="width: 14rem;">
+                    <label class="form-label" for="customFile">{{ __('index.Add img in single' )}}</label>
+                    <input type="file" class="form-control" id="customFile" name="files[]" multiple>
+                </div>
+
+                {{--  videos for single page  --}}
+                <div style="width: 14rem;">
+                    <label class="form-label" for="customFile">{{ __('index.Add video in single' )}}</label>
+                    <input type="file" class="form-control" id="customFile" name="video[]" multiple>
+                </div>
 
                 <div class="row">
                     <div class="col-sm-10 offset-sm-2">
-                        <button type="submit" class="btn btn-primary">Update</button>
-                        <button  class="btn btn-primary" > <a id="back-from-page" href="{{ route('admin.contacts.index') }}">Back</a>
-                        </button>
-
-
+                        <button type="submit" class="btn btn-primary">{{__('index.sign')}}</button>
                     </div>
                 </div>
+
+            </div>
 
 
         </form>

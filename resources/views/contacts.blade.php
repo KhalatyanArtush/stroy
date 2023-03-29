@@ -6,10 +6,44 @@
     <section class="wrapper">
         <div class="page_title_glav_block">
             <div>
-                <h1>Contacts</h1>
-                <span class="home_title_text_white">HOME | </span>
-                <span class="home_title_text_red">contacts</span>
+                <h1>{{__('index.Contects')}}</h1>
             </div>
+        </div>
+        <div class="welcome_section_icon">
+            <a href="{{ $home->facebook }}" target="_blank">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.335 23.6842V12.8815H17.9596L18.5033 8.67027H14.335V5.982C14.335 4.76313 14.6721 3.93248 16.4219 3.93248L18.6501 3.93157V0.164878C18.2647 0.114804 16.942 0 15.4026 0C12.1879 0 9.98711 1.9622 9.98711 5.56492V8.67027H6.35156V12.8815H9.98711V23.6842H14.335Z"
+                        fill="white"/>
+                </svg>
+            </a>
+            <a href="{{ $home->whatsapp }}" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="currentColor"
+                     viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+            </a>
+            <a href="{{ $home->instagram }}" target="_blank">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18.2327 0.605469H6.76726C3.03573 0.605469 0 3.48142 0 7.01656V17.8787C0 21.4137 3.03573 24.2896 6.76726 24.2896H18.2329C21.9642 24.2896 25 21.4137 25 17.8787V7.01656C25 3.48142 21.9642 0.605469 18.2327 0.605469V0.605469ZM23.5343 17.8787C23.5343 20.6481 21.1561 22.9012 18.2327 22.9012H6.76726C3.84387 22.9012 1.4656 20.6481 1.4656 17.8787V7.01656C1.4656 4.24703 3.84387 1.99394 6.76726 1.99394H18.2329C21.1561 1.99394 23.5343 4.24703 23.5343 7.01656V17.8787Z"
+                        fill="white"/>
+                    <path
+                        d="M12.4998 5.97168C8.7305 5.97168 5.66406 8.87673 5.66406 12.4476C5.66406 16.0185 8.7305 18.9236 12.4998 18.9236C16.2691 18.9236 19.3355 16.0185 19.3355 12.4476C19.3355 8.87673 16.2691 5.97168 12.4998 5.97168ZM12.4998 17.5351C9.53883 17.5351 7.12967 15.2529 7.12967 12.4476C7.12967 9.64252 9.53883 7.36015 12.4998 7.36015C15.4609 7.36015 17.8699 9.64252 17.8699 12.4476C17.8699 15.2529 15.4609 17.5351 12.4998 17.5351Z"
+                        fill="white"/>
+                    <path
+                        d="M19.4994 3.67188C18.3855 3.67188 17.4795 4.53036 17.4795 5.58544C17.4795 6.64071 18.3855 7.49919 19.4994 7.49919C20.6133 7.49919 21.5194 6.64071 21.5194 5.58544C21.5194 4.53018 20.6133 3.67188 19.4994 3.67188ZM19.4994 6.11055C19.1938 6.11055 18.9451 5.87492 18.9451 5.58544C18.9451 5.29579 19.1938 5.06034 19.4994 5.06034C19.8051 5.06034 20.0538 5.29579 20.0538 5.58544C20.0538 5.87492 19.8051 6.11055 19.4994 6.11055Z"
+                        fill="white"/>
+                </svg>
+            </a>
+            <a href="{{ $home->telegram }}" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                     viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                </svg>
+            </a>
         </div>
     </section>
     <section class="wrapper">
@@ -21,7 +55,7 @@
                                 <path d="M64.4737 46.0895C60.1557 46.0895 55.9264 45.4153 51.9179 44.0926C49.9616 43.4184 47.74 43.9379 46.4543 45.2495L38.5074 51.2511C29.389 46.3843 23.5532 40.5521 18.7527 31.5L24.5921 23.7411C26.0621 22.2711 26.589 20.1194 25.959 18.1042C24.6253 14.07 23.9474 9.83685 23.9474 5.52632C23.9474 2.47942 21.468 0 18.4211 0H5.52632C2.47942 0 0 2.47942 0 5.52632C0 41.0752 28.9248 70 64.4737 70C67.5206 70 70 67.5206 70 64.4737V51.6158C70 48.5689 67.5206 46.0895 64.4737 46.0895Z" fill="#22BEB3"/>
                                 </svg>
                         </span>
-                    <a href="tel:+374 77 00 00 00">+374 77 00 00 00</a>
+                    <a href="tel:{{ $contact->tel }}">{{ $contact->tel }}</a>
                 </div>
                 <div class="back_info_block">
                         <span>
@@ -32,7 +66,7 @@
                                 <path d="M42.3905 38.0014L36.1998 42.0789C35.8323 42.3196 35.4167 42.4377 34.9967 42.4377C34.5767 42.4377 34.1611 42.3196 33.7936 42.0789L27.603 37.9971L0.136719 55.3702C0.473594 57.4483 2.19734 59.0627 4.37172 59.0627H65.6217C67.7961 59.0627 69.5198 57.4483 69.8567 55.3702L42.3905 38.0014Z" fill="#22BEB3"/>
                                 </svg>
                         </span>
-                    <a href="mailti:info@webstart.am">info@webstart.am</a>
+                    <a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a>
                 </div>
                 <div class="back_info_block">
                         <span>
@@ -41,55 +75,35 @@
                                 <path d="M37.1875 13.125H32.8125V35.9057L46.5783 49.6716L49.6716 46.5783L37.1875 34.0942V13.125Z" fill="#22BEB3"/>
                                 </svg>
                         </span>
-                    <p>09:00 - 10:00</p>
+                    <p>{{ $contact->time }}</p>
                 </div>
             </div>
             <div class="contact_form_map_block">
                 <div class="contact_form_blok">
-                    <h3>REVERSE CONNECTION</h3>
+                    <h3>{{__('index.send to mail ')}}</h3>
                     <form action="">
                         <div class="name_form_block">
-                            <input type="text" id="name" name="name" placeholder="name *">
-                            <input type="text" id="fname" name="fname" placeholder="Last name *">
+                            <input type="text" id="name" name="name" placeholder="{{__('index.name')}} *">
+                            <input type="text" id="fname" name="fname" placeholder="{{__('index.number')}} *">
                         </div>
                         <div class="phone_form_block">
-                            <div class="custom-select">
-                                <select>
-                                    <option value="0">
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect y="4" width="18" height="4" fill="#0085FF"/>
-                                            <rect y="8" width="18" height="4" fill="#FF8A00"/>
-                                            <rect width="18" height="4" fill="#FF0000"/>
-                                        </svg>
-                                        +374
-                                    </option>
-                                    <option value="1">
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect y="4" width="18" height="4" fill="#0085FF"/>
-                                            <rect y="8" width="18" height="4" fill="#FF8A00"/>
-                                            <rect width="18" height="4" fill="#FF0000"/>
-                                        </svg>
-                                        +374
-                                    </option>
-                                    <option value="2">1</option>
-                                    <option value="3">1</option>
-                                    <option value="4">1</option>
-                                    <option value="5">1</option>
-                                    <option value="6">1</option>
-                                </select>
-                            </div>
-                            <input class="number_inp" type="number" placeholder="phone number *">
+
+                            <input class="number_inp" type="number" placeholder="{{__('index.email')}} *">
                         </div>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="{{__('index.message')}}"></textarea>
                         <button>
-                            <input type="submit" value="send">
+                            <input type="submit" value="{{__('index.send')}}">
                         </button>
                     </form>
                 </div>
                 <div class="contact_map_blok">
-                    <div class="contact_page_map_block" id="map">
-
+                    @if($contact->city)
+                    <div class="contact_page_map_block" id="map" style="height: 100%;">
+                        <iframe style="border:0; width: 100%; height: 400px;"
+                                src="https://maps.google.com/maps?q={{$contact->city}}%20{{$contact->street}}%20%20{{$contact->number}}&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

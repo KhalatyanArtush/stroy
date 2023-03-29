@@ -10,12 +10,27 @@ class Service
     public function store($data)
     {
 
-        Contact::create($data);
+        Contact::create([
+            'tel' => $data['tel'],
+            'email' => $data['email'],
+            'address' => $data['address'],
+            'city' => $data['city'],
+            'street' => $data['street'],
+            'number' => $data['number'],
+        ]);
     }
 
 
-    public function update($contact, $data)
+    public function update($about, $data)
     {
-        $contact->update($data);
+            $about->update([
+                'tel' => $data['tel'],
+                'email' => $data['email'],
+                'address' => $data['address'],
+                'city' => $data['city'],
+                'street' => $data['street'],
+                'number' => $data['number'],
+
+            ]);
     }
 }

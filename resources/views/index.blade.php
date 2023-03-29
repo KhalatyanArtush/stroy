@@ -29,13 +29,6 @@
                                 d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
                         </svg>
                     </a>
-                    <a href="{{ $home->twitter }}" target="_blank">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M24.3424 5.12969C23.4617 5.51604 22.5232 5.77212 21.5447 5.89646C22.5513 5.29548 23.3196 4.35107 23.6807 3.21275C22.7422 3.77229 21.7061 4.16752 20.6018 4.38808C19.7107 3.43923 18.4406 2.85156 17.0551 2.85156C14.3669 2.85156 12.2028 5.03347 12.2028 7.70831C12.2028 8.09317 12.2353 8.46324 12.3153 8.81554C8.2786 8.61867 4.70672 6.68396 2.30722 3.73676C1.8883 4.46357 1.64258 5.29548 1.64258 6.19104C1.64258 7.87262 2.50853 9.36324 3.79932 10.2262C3.01922 10.2114 2.25393 9.98495 1.60557 9.62821C1.60557 9.64301 1.60557 9.66225 1.60557 9.6815C1.60557 12.041 3.28863 14.0009 5.4957 14.4524C5.10047 14.5604 4.66972 14.6123 4.22268 14.6123C3.91182 14.6123 3.59801 14.5945 3.30343 14.5294C3.93254 16.4522 5.71774 17.8659 7.84044 17.9118C6.18847 19.204 4.09093 19.9826 1.82021 19.9826C1.42202 19.9826 1.04011 19.9649 0.658203 19.916C2.80903 21.303 5.35804 22.095 8.10689 22.095C17.0418 22.095 21.9266 14.6937 21.9266 8.27821C21.9266 8.06357 21.9192 7.85633 21.9089 7.65058C22.8725 6.96669 23.6822 6.11258 24.3424 5.12969Z"
-                                fill="white"/>
-                        </svg>
-                    </a>
                     <a href="{{ $home->instagram }}" target="_blank">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -76,25 +69,42 @@
         <section class="wrapper">
             <div class="releases_section">
                 <div class="releases_section_albom_block">
-                    @foreach($homeServices as $homeService)
-                        <div class="releases_section_albom">
-                            <a href="">
-                                <div class="releases_section_albom_photo">
-                                    <img src="{{ asset('HomeServices/images/'.$homeService->image_path) }}" alt="">
-                                    <div class="releases_hov"></div>
-                                </div>
-                                <div class="releases_section_albom_name_block">
-                                    <p>{{ $homeService->text }}</p>
+{{--                    @foreach($homeServices as $homeService)--}}
+{{--                        <div class="releases_section_albom">--}}
+{{--                            <a href="">--}}
+{{--                                <div class="releases_section_albom_photo">--}}
+{{--                                    <img src="{{ asset('HomeServices/images/'.$homeService->image_path) }}" alt="">--}}
+{{--                                    <div class="releases_hov">{{ $homeService->title2 }}</div>--}}
+{{--                                </div>--}}
+{{--                                <div class="releases_section_albom_name_block">--}}
+{{--                                    <p>{{ $homeService->text }}</p>--}}
 {{--                                    <span>2017</span>--}}
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
                 </div>
             </div>
         </section>
         <section class="upcoming_events_block"
                  style="background-image: url({{asset('Home/images/'.$home->image_path2)}});">
+            <div class="wrapper">
+                <div class="upcoming_events_sections_block">
+                    <h3 class="general_min_title">Upcoming <span class="text_blue">events</span></h3>
+                    <div class="event_upcoming_list_block">
+                        <div class="list_section_block">
+                            <div class="list_info_block_left">
+
+                                <p>{{ $home->title2 }}</p>
+                            </div>
+                            <div class="list_read_more_btn">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </section>
 
         <section class="jsingn_block" style="background-image: url({{asset('Home/images/'.$home->image_path3)}});">
@@ -102,8 +112,7 @@
                 <div class="jsingn_block_info">
                     <p>{{ $home->title3 }}</p>
                     <span>{{ $home->text }}</span>
-                    {{--                <span>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave.</span>--}}
-                    {{--                <img src="img/jsing.png" alt="">--}}
+
                 </div>
             </div>
         </section>

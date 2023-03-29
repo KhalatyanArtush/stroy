@@ -43,9 +43,15 @@
                     <input type="file" class="form-control" id="customFile" name="img">
                 </div>
 
+
+                <div style="width: 14rem;">
+                    <label class="form-label" for="customFile">{{__('index.Add img')}}</label>
+                    <input type="file" class="form-control" id="customFile" name="img_logo">
+                </div>
+
                 <div class="row">
                     <div class="col-sm-10 offset-sm-2">
-                        <button type="submit" class="btn btn-primary">{{__('titles.sign')}}</button>
+                        <button type="submit" class="btn btn-primary">{{__('index.sign')}}</button>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,8 @@ class CreateAboutsTable extends Migration
             $table->string('title')->nullable();
             $table->text('text')->nullable();
             $table->string('image_path')->nullable();
-            $table->string('text_down')->nullable();
+            $table->string('image_path_logo')->nullable();
+            $table->text('text_down')->nullable();
             $table->string('stock')->nullable();
             $table->timestamps();
         });

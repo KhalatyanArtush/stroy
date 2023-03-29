@@ -10,14 +10,40 @@ class Service
     public function store($data){
 
         //        $newImageName2 = time() . '.' . $data['img2']->extension();
-        $newImageName1 = $data['img1']->getClientOriginalName();
-        $newImageName2 = $data['img2']->getClientOriginalName();
-        $newImageName3 = $data['img3']->getClientOriginalName();
-        $newImageNameLogo = $data['img_logo']->getClientOriginalName();
-        $data['img1']->move(public_path('Home/images'), $newImageName1);
-        $data['img2']->move(public_path('Home/images'), $newImageName2);
-        $data['img3']->move(public_path('Home/images'), $newImageName3);
-        $data['img_logo']->move(public_path('Home/images'), $newImageNameLogo);
+//        $newImageName1 = $data['img1']->getClientOriginalName();
+//        $newImageName2 = $data['img2']->getClientOriginalName();
+//        $newImageName3 = $data['img3']->getClientOriginalName();
+//        $newImageNameLogo = $data['img_logo']->getClientOriginalName();
+//        $data['img1']->move(public_path('Home/images'), $newImageName1);
+//        $data['img2']->move(public_path('Home/images'), $newImageName2);
+//        $data['img3']->move(public_path('Home/images'), $newImageName3);
+//        $data['img_logo']->move(public_path('Home/images'), $newImageNameLogo);
+
+
+        if (isset($data['img1'])) {
+            $newImageName1 = $data['img1']->getClientOriginalName();
+            $data['img1']->move(public_path('Home/images'), $newImageName1);
+        } else {
+            $newImageName1 = null;
+        }
+        if (isset($data['img2'])) {
+            $newImageName2 = $data['img2']->getClientOriginalName();
+            $data['img2']->move(public_path('Home/images'), $newImageName2);
+        } else {
+            $newImageName2 = null;
+        }
+        if (isset($data['img3'])) {
+            $newImageName3 = $data['img3']->getClientOriginalName();
+            $data['img3']->move(public_path('Home/images'), $newImageName3);
+        } else {
+            $newImageName3 = null;
+        }
+        if (isset($data['img_logo'])) {
+            $newImageNameLogo = $data['img_logo']->getClientOriginalName();
+            $data['img_logo']->move(public_path('Home/images'), $newImageNameLogo);
+        } else {
+            $newImageNameLogo = null;
+        }
 
         Home::create([
             'image_path1' => $newImageName1,

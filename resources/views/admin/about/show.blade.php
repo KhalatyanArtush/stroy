@@ -31,8 +31,17 @@
                     </div>
                 </div>
                 <div style="width: 14rem;">
-                    <label class="form-label" for="customFile">{{__('index.Add img')}}</label>
                     <input type="file" class="form-control" id="customFile" name="img">
+                </div>
+
+                <div class="row mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.img logo')}}</label>
+                    <div class="col-sm-10">
+                        <img style="width: 300px; height: 300px;" src="{{ asset('About/images/'.$about->image_path_logo) }}">
+                    </div>
+                </div>
+                <div style="width: 14rem;">
+                    <input type="file" class="form-control" id="customFile" name="img_logo">
                 </div>
 
             </article><!-- End blog entry -->

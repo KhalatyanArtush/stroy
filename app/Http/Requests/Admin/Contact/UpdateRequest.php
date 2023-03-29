@@ -30,8 +30,6 @@ class UpdateRequest extends FormRequest
             'city'=>'string|nullable',
             'street'=>'string|nullable',
             'number'=>'string|nullable',
-            'long'=>'string|nullable',
-            'lat'=>'string|nullable',
         ];
     }
 }

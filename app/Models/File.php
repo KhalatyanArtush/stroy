@@ -12,6 +12,6 @@ class File extends Model
 
     public function service()
     {
-        return $this->belongsTo(Service::class);
+        return $this->belongsTo(OurServise::class);
     }
 }

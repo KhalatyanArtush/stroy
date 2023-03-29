@@ -15,10 +15,10 @@ class CreateFilesTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('service_id')->unsigned()->index();
+            $table->integer('ourservice_id')->unsigned()->index();
             $table->string('name');
-            $table->text('overview');
-            $table->decimal('price', 6, 2);
+//            $table->text('overview');
+//            $table->decimal('price', 6, 2);
             $table->timestamps();
             $table->softDeletes();
         });

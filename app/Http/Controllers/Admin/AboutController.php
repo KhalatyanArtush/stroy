@@ -64,6 +64,10 @@ class AboutController extends Controller
 
     public function delete(About $about)
     {
+        $image_path = "About/images/".$about->image_path;
+        $image_path_logo = "About/images/".$about->image_path_logo;
+        unlink($image_path);
+        unlink($image_path_logo);
         $about->delete();
         return redirect()->route('admin.home.index');
     }
