@@ -18,10 +18,11 @@
                 <div class="toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <h2>Title 2</h2>
+                <h2>{{__('index.About us')}}</h2>
             </div>
             <div class="form-block">
                 <form action="{{route('admin.about.store')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="input-box">
                         <label for="title">{{__('index.title')}}</label>
                         <input type="text" name="title" placeholder="first line..."/>
@@ -29,12 +30,12 @@
 
                     <div class="input-box">
                         <label for="text">{{__('index.text')}}</label>
-                        <input type="text" name="text" placeholder="first line..."/>
+                        <textarea rows="6" name="text"></textarea>
                     </div>
 
                     <div class="input-box">
                         <label for="text_down">{{__('index.text_down')}}</label>
-                        <input type="text" name="text_down" placeholder="first line..."/>
+                        <textarea rows="6" name="text_down"></textarea>
                     </div>
 
                     <div class="input-box">

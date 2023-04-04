@@ -4,7 +4,9 @@
     <main>
         <section class="madlenyan_welcome_section">
             <div class="madlenyan_welcome_section_bg"
-                 style=" background-image: url({{ asset('Home/images/'.$home->image_path1) }});"></div>
+                {{--   nkari chlinelu depqum errora talis              --}}
+                 style=" background-image: url({{ asset('Home/images/'.$home->image_path1) }});"
+            ></div>
             <div class="madlenyan_welcome_section_bg_transparent"></div>
             <div class="info_icon_welcome_block">
                 <div class="welcome_section_info">
@@ -69,20 +71,20 @@
         <section class="wrapper">
             <div class="releases_section">
                 <div class="releases_section_albom_block">
-{{--                    @foreach($homeServices as $homeService)--}}
-{{--                        <div class="releases_section_albom">--}}
-{{--                            <a href="">--}}
-{{--                                <div class="releases_section_albom_photo">--}}
-{{--                                    <img src="{{ asset('HomeServices/images/'.$homeService->image_path) }}" alt="">--}}
-{{--                                    <div class="releases_hov">{{ $homeService->title2 }}</div>--}}
-{{--                                </div>--}}
-{{--                                <div class="releases_section_albom_name_block">--}}
-{{--                                    <p>{{ $homeService->text }}</p>--}}
+                    @foreach($services as $service)
+                        <div class="releases_section_albom">
+                            <a href="">
+                                <div class="releases_section_albom_photo">
+                                    <img src="{{ asset('ServiceHome/images/'.$service->image_path) }}" alt="">
+                                    <div class="releases_hov">{{ $service->image_title }}</div>
+                                </div>
+                                <div class="releases_section_albom_name_block">
+                                    <p>{{ $service->image_text }}</p>
 {{--                                    <span>2017</span>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    @endforeach--}}
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\File;
+namespace App\Http\Requests\Admin\Video;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FileRequest extends FormRequest
+class VideoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

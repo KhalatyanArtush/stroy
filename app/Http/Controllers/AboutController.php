@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Home;
+use App\Models\Ourservice;
 use App\Models\OurServise;
 use App\Models\Repair;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class AboutController extends Controller
     {
         $home = Home::first();
         $about = About::first();
+        $services = Ourservice::all();
 
-        return view('about',compact('about','home'));
+        return view('about',compact('about','home', 'services'));
     }
 }

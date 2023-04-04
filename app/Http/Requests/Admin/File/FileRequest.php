@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\File;
+namespace App\Http\Requests\Admin\File;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,7 +25,8 @@ class FileRequest extends FormRequest
     {
         return [
             'id'=>'integer',
-
+            'ourservice_id'=>'string',
+            'name'=>'string',
         ];
     }
 }

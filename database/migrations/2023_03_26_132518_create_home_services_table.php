@@ -16,7 +16,7 @@ class CreateHomeServicesTable extends Migration
         Schema::create('home_services', function (Blueprint $table) {
             $table->id();
             $table->string('image_path')->nullable();
-            $table->string('text')->nullable();
+            $table->text('text')->nullable();
             $table->timestamps();
         });
     }

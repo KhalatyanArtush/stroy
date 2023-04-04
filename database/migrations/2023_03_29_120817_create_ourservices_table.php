@@ -17,7 +17,7 @@ class CreateOurservicesTable extends Migration
             $table->id();
             $table->string('header_title')->nullable();
             $table->string('title')->nullable();
-            $table->string('text')->nullable();
+            $table->text('text')->nullable();
             $table->string('image_path')->nullable();
             $table->string('image_title')->nullable();
             $table->string('image_text')->nullable();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\File\FileRequest;
 use Illuminate\Http\Request;
 
 use App\Models\File;
@@ -40,6 +41,19 @@ class FileUploadController extends Controller
         File::insert($insert);
 
         return redirect('files-upload')->with('status', 'Multiple File has been uploaded Successfully');
+
+    }
+
+    public function delete(File $file, FileRequest $request)
+    {
+
+        $file = File::find($request->image_id);
+        $service = $file->ourservice_id;
+        if (is_file("Services/images/".$request->name)){
+            unlink("Services/images/".$request->name);
+        }
+        $file->delete();
+        return redirect()->route('admin.service.show',$service);
 
     }
 }

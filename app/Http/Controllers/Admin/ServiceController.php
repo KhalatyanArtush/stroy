@@ -41,7 +41,6 @@ class ServiceController extends Controller
 
     public function store(StoreRequest $request)
     {
-        $data = $request->validated();
         if ($request->hasfile('files')) {
             foreach ($request->file('files') as $key => $file) {
                 $name = $file->getClientOriginalName();
@@ -57,32 +56,19 @@ class ServiceController extends Controller
         }
 
         if ($request->hasfile('video')) {
-            foreach ($request->file('video') as $key => $video) {
 
-                $name_video = $video->getClientOriginalName();
-                $video->move(public_path('Services/video/'), $name_video);
+                $name_video = $request->file('video')->getClientOriginalName();
+                $request->file('video')->move(public_path('Services/video/'), $name_video);
                 $ourservice_id = $request->ourservice_id + 1;
 
-                $insert_video[$key]['name'] = $name_video;
-                $insert_video[$key]['ourservice_id'] = $ourservice_id;
-            }
+                $insert_video['name'] = $name_video;
+                $insert_video['ourservice_id'] = $ourservice_id;
 
             Video::insert($insert_video);
         }
-        if (isset($data['img'])) {
-            $newImageName = $data['img']->getClientOriginalName();
-            $data['img']->move(public_path('ServiceHome/images'), $newImageName);
-        } else {
-            $newImageName = null;
-        }
-        $this->service->store([
-            'image_path' => $newImageName,
-            'header_title' => $data['header_title'],
-            'title' => $data['title'],
-            'text' => $data['text'],
-            'image_title' => $data['image_title'],
-            'image_text' => $data['image_text'],
-        ]);
+
+        $data = $request->validated();
+        $this->service->store($data);
 
         return redirect()->route('admin.services.index');
     }
@@ -107,15 +93,13 @@ class ServiceController extends Controller
         }
 
         if ($request->hasfile('video')) {
-            foreach ($request->file('video') as $key => $video) {
 
-                $name_video = $video->getClientOriginalName();
-                $video->move(public_path('Services/video/'), $name_video);
-                $ourservice_id = $request->ourservice_id;
+            $name_video = $request->file('video')->getClientOriginalName();
+            $request->file('video')->move(public_path('Services/video/'), $name_video);
+            $ourservice_id = $request->ourservice_id;
 
-                $insert_video[$key]['name'] = $name_video;
-                $insert_video[$key]['ourservice_id'] = $ourservice_id;
-            }
+            $insert_video['name'] = $name_video;
+            $insert_video['ourservice_id'] = $ourservice_id;
 
             Video::insert($insert_video);
         }

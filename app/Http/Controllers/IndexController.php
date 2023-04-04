@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Home;
+use App\Models\Ourservice;
 use App\Models\OurServise;
 use App\Models\Repair;
 use Illuminate\Http\Request;
@@ -19,14 +20,9 @@ class IndexController extends Controller
     {
 
         $home = Home::first();
+        $services = Ourservice::all();
 
-//        $address = Contact::first();
-//        $contacts = Contact::all();
-//        $ourServises = Servise::all();
-//        $repairs = Repair::all();
-
-        return view('index', compact('home'));
-        return view('about');
+        return view('index', compact('home', 'services'));
 
     }
 }

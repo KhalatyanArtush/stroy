@@ -31,7 +31,7 @@ class StoreRequest extends FormRequest
             'image_title'=>'string|nullable',
             'image_text'=>'string|nullable',
             'files[]' => 'mimes:jpg,jpeg,png|nullable',
-            'video[]' => 'mimes:mp4,mov|nullable',
+            'video' => 'mimes:mp4,mov|nullable',
 
         ];
     }

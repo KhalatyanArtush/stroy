@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(window).scroll(function() {
         if ($(this).scrollTop()>100)
         {
-        $('#header').fadeOut();  
+        $('#header').fadeOut();
         }
         else
         {
@@ -20,7 +20,7 @@ $(document).ready(function(){
         $(".releases_section_albom:first").hide("low");
      });
 
-    
+
 });
 
 
@@ -40,51 +40,67 @@ function menuOpen(){
 
 
 
+//
+//
+// var timeOut = 0;
+// var slideIndex = 0;
+// var autoOn = true;
+//
+// var prevArrow = document.querySelector('.prev');
+// var showArrow = document.querySelector('.next');
+//
+// autoSlides();
+//
+// function autoSlides() {
+//     timeOut = timeOut - 20;
+//     if (autoOn == true && timeOut < 0) {
+//         showSlides();
+//     }
+//     setTimeout(autoSlides, 20);
+// }
+//
+// function prevSlide() {
+//
+//     timeOut = 5000;
+//
+//     var slides = document.querySelectorAll(".slide");
+//
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slideIndex--;
+//
+//     if (slideIndex > slides.length) {
+//         slideIndex = 1
+//     }
+//     if (slideIndex == 0) {
+//         slideIndex = 3
+//     }
+//     slides[slideIndex - 1].style.display = "block";
+// }
+//
+// function showSlides() {
+//
+//     timeOut = 5000;
+//
+//     var slides = document.querySelectorAll(".slide");
+//
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slideIndex++;
+//
+//     if (slideIndex > slides.length) {
+//         slideIndex = 1
+//     }
+//     slides[slideIndex - 1].style.display = "block";
+// }
+//
+// prevArrow.addEventListener('click', ()=> {
+//     prevSlide();
+// })
+//
+// showArrow.addEventListener('click', ()=> {
+//     showSlides();
+// })
 
-
-// carusel 
-function moveToSelected(element) {
-    if (element == "next") {
-      var selected = $(".selected").next();
-    } else if (element == "prev") {
-      var selected = $(".selected").prev();
-    } else {
-      var selected = element;
-    }
-    var next = $(selected).next();
-    var prev = $(selected).prev();
-    var prevSecond = $(prev).prev();
-    var nextSecond = $(next).next();
-    $(selected).removeClass().addClass("selected");
-    $(prev).removeClass().addClass("prev");
-    $(next).removeClass().addClass("next");
-    $(nextSecond).removeClass().addClass("nextRightSecond");
-    $(prevSecond).removeClass().addClass("prevLeftSecond");
-    $(nextSecond).nextAll().removeClass().addClass('hideRight');
-    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-  }
-  // Eventos teclado
-  $(document).keydown(function(e) {
-      switch(e.which) {
-          case 37: // left
-          moveToSelected('prev');
-          break;
-  
-          case 39: // right
-          moveToSelected('next');
-          break;
-  
-          default: return;
-      }
-      e.preventDefault();
-  });
-  $('#carousel div').click(function() {
-    moveToSelected($(this));
-  });
-  $('#prev').click(function() {
-    moveToSelected('prev');
-  });
-  $('#next').click(function() {
-    moveToSelected('next');
-  });
-  

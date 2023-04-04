@@ -6,12 +6,9 @@
                     <img src="{{asset('img/logo4.jpg')}}" alt="">
                 </a>
                 <div class="footer_nav_bar">
-                    <a href="#">Укладка тротуарной плитки</a>
-                    <a href="#">Планировка грунта</a>
-                    <a href="#">Дренажные работы</a>
-                    <a href="#">Отмостка вокруг дома</a>
-                    <a href="#">Установка газона</a>
-                    <a href="#">Дикий камень и фасадная плитка</a>
+                    @foreach($services as $service)
+                        <a href="#">{{ $service->header_title }}</a>
+                    @endforeach
                     <a href="{{ route('contacts') }}">{{__('index.Contects')}}</a>
                 </div>
                 <div class="footer_icon_block">
@@ -68,5 +65,6 @@
 <script src="{{ asset('js/slick.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/option.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/map.js') }}" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js" type="text/javascript"></script>
 </body>
 </html>
