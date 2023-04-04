@@ -1,63 +1,60 @@
 @extends('layouts.adminHeader')
 
+    <div class="container">
+        @include('inc.admin.sidebar')
+        <div class="main">
 
-<div id="creatDiv">
-
-    @if($errors->any())
-        <div id="alertMassege">
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{ $error  }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <div style="margin-top: 100px; background-color: #c3aaaa;">
-        <form action="{{route('admin.about.store')}}" method="post" enctype="multipart/form-data">
-            @csrf
-            <div class="form-add">
-
-                <div class="row mb-3">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.title')}}</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="title">
-                    </div>
+            @if($errors->any())
+                <div id="alertMassege">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error  }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+            @endif
 
-                <div class="row mb-3">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.text')}}</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="text">
-                    </div>
+            <div class="main-top">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
-
-                <div class="row mb-3">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">{{__('index.text_down')}}</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="text_down">
-                    </div>
-                </div>
-
-                <div style="width: 14rem;">
-                    <label class="form-label" for="customFile">{{__('index.Add img')}}</label>
-                    <input type="file" class="form-control" id="customFile" name="img">
-                </div>
-
-
-                <div style="width: 14rem;">
-                    <label class="form-label" for="customFile">{{__('index.Add img')}}</label>
-                    <input type="file" class="form-control" id="customFile" name="img_logo">
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-10 offset-sm-2">
-                        <button type="submit" class="btn btn-primary">{{__('index.sign')}}</button>
-                    </div>
-                </div>
+                <h2>Title 2</h2>
             </div>
+            <div class="form-block">
+                <form action="{{route('admin.about.store')}}" method="post" enctype="multipart/form-data">
+                    <div class="input-box">
+                        <label for="title">{{__('index.title')}}</label>
+                        <input type="text" name="title" placeholder="first line..."/>
+                    </div>
 
-        </form>
+                    <div class="input-box">
+                        <label for="text">{{__('index.text')}}</label>
+                        <input type="text" name="text" placeholder="first line..."/>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="text_down">{{__('index.text_down')}}</label>
+                        <input type="text" name="text_down" placeholder="first line..."/>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="img">{{__('index.Add img')}}</label>
+                        <input type="file" name="img" placeholder="first line..."/>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="img_logo">{{__('index.img logo')}}</label>
+                        <input type="file" name="img_logo" placeholder="first line..."/>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" class="btn">{{__('index.Add')}}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+
 @include('layouts.adminFooter')
 
 
