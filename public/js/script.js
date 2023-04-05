@@ -38,69 +38,26 @@ function menuOpen(){
   };
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByTagName("INPUT");
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    for (var i = 0; i < elements.length; i++) {
+        // console.log(elements['email']);
+        elements[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("Это обязательное поле");
+            }
+        };
+        elements[i].oninput = function(e) {
+            e.target.setCustomValidity("");
+        };
+    }
+})
 
 
-//
-//
-// var timeOut = 0;
-// var slideIndex = 0;
-// var autoOn = true;
-//
-// var prevArrow = document.querySelector('.prev');
-// var showArrow = document.querySelector('.next');
-//
-// autoSlides();
-//
-// function autoSlides() {
-//     timeOut = timeOut - 20;
-//     if (autoOn == true && timeOut < 0) {
-//         showSlides();
-//     }
-//     setTimeout(autoSlides, 20);
-// }
-//
-// function prevSlide() {
-//
-//     timeOut = 5000;
-//
-//     var slides = document.querySelectorAll(".slide");
-//
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     slideIndex--;
-//
-//     if (slideIndex > slides.length) {
-//         slideIndex = 1
-//     }
-//     if (slideIndex == 0) {
-//         slideIndex = 3
-//     }
-//     slides[slideIndex - 1].style.display = "block";
-// }
-//
-// function showSlides() {
-//
-//     timeOut = 5000;
-//
-//     var slides = document.querySelectorAll(".slide");
-//
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     slideIndex++;
-//
-//     if (slideIndex > slides.length) {
-//         slideIndex = 1
-//     }
-//     slides[slideIndex - 1].style.display = "block";
-// }
-//
-// prevArrow.addEventListener('click', ()=> {
-//     prevSlide();
-// })
-//
-// showArrow.addEventListener('click', ()=> {
-//     showSlides();
-// })
 
+$( "#make-comment" ).click(function() {
+    $('.comments').css('display','block');
+    $('#make-comment').css('display','none');
+});

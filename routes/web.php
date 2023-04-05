@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,6 +26,14 @@ Route::get('/abouts', [App\Http\Controllers\AboutController::class, '__invoke'])
 Route::get('/contacts', [App\Http\Controllers\ContactController::class, '__invoke'])->name('contacts');
 Route::get('/services', [App\Http\Controllers\OurServiceController::class, '__invoke'])->name('services');
 Route::get('/single-service/{service}', [App\Http\Controllers\OurServiceController::class, 'single'])->name('singleServices');
+
+Route::post('/comment', [App\Http\Controllers\CommentController::class, 'store'])->name('registerComment.index');
+//Route::get('/service/creat', [App\Http\Controllers\Admin\ServiceController::class, 'creat'])->name('admin.service.creat');
+//Route::post('/service', [App\Http\Controllers\Admin\ServiceController::class, 'store'])->name('admin.service.store');
+//Route::get('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'show'])->name('admin.service.show');
+//Route::get('/service/{service}/edit', [App\Http\Controllers\Admin\ServiceController::class, 'edit'])->name('admin.service.edit');
+//Route::patch('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'update'])->name('admin.service.update');
+//Route::delete('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'delete'])->name('admin.service.delete');
 
 Auth::routes();
 
@@ -66,6 +75,22 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     Route::delete('/file', [App\Http\Controllers\Admin\FileUploadController::class, 'delete'])->name('admin.file.delete');
     Route::delete('/video', [App\Http\Controllers\Admin\VideoController::class, 'delete'])->name('admin.video.delete');
 
+//    Route::get('/send', [App\Http\Controllers\MailController::class, 'index'])->name('admin.mail.delete');
+
+
+
+
+
 });
+Route::get('send-email', [App\Http\Controllers\MailController::class, 'index'])->name('mail.send');
 
-
+//Route::get('send-email', function(){
+//    $mailData = [
+//        "name" => "Test NAME",
+//        "dob" => "12/12/1990"
+//    ];
+//
+//    Mail::to("artush.xalatyan@mail.ru")->send(new \App\Mail\MailableName($mailData));
+//
+//    dd("Mail Sent Successfully!");
+//});

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\Home;
 use App\Models\Ourservice;
@@ -21,8 +22,9 @@ class IndexController extends Controller
 
         $home = Home::first();
         $services = Ourservice::all();
+        $comments = Comment::all();
 
-        return view('index', compact('home', 'services'));
+        return view('index', compact('home', 'services', 'comments'));
 
     }
 }

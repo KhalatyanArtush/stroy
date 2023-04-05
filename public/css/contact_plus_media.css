@@ -77,7 +77,8 @@ textarea {
 .name_form_block input {
     padding: 20px;
     background-color: transparent;
-    max-width: 400px;
+    /*max-width: 400px;*/
+    max-width: 1000px;
     width: 100%;
     height: 56px;
     border: 1px solid #FFFFFF;
@@ -201,7 +202,7 @@ textarea {
     width: 6px;
 }
 .select-items::-webkit-scrollbar-thumb {
-    background-color: white; 
+    background-color: white;
     border-radius: 5px;
 }
 .select-hide {

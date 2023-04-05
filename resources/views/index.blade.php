@@ -4,7 +4,7 @@
     <main>
         <section class="madlenyan_welcome_section">
             <div class="madlenyan_welcome_section_bg"
-                {{--   nkari chlinelu depqum errora talis              --}}
+                 {{--   nkari chlinelu depqum errora talis              --}}
                  style=" background-image: url({{ asset('Home/images/'.$home->image_path1) }});"
             ></div>
             <div class="madlenyan_welcome_section_bg_transparent"></div>
@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="releases_section_albom_name_block">
                                     <p>{{ $service->image_text }}</p>
-{{--                                    <span>2017</span>--}}
+                                    {{--                                    <span>2017</span>--}}
                                 </div>
                             </a>
                         </div>
@@ -96,7 +96,38 @@
                     <div class="event_upcoming_list_block">
                         <div class="list_section_block">
                             <div class="list_info_block_left">
+                                <button class="mail-button" id="make-comment">
+                                    {{__('index.comments')}}
+                                </button>
+                                <div class="comments" style="display: none">
+                                    <form action="{{ route('registerComment.index') }}" method="post">
+                                        @csrf
+                                        <div class="name_form_block">
+                                            <input type="text" id="name" name="name"
+                                                   placeholder="{{__('index.name')}} *" required>
+                                        </div>
+                                        <div class="phone_form_block">
 
+                                            <input class="number_inp" type="email" name="email"
+                                                   placeholder="{{__('index.email')}} *">
+                                        </div>
+                                        <textarea name="message" id="" cols="30" rows="10"
+                                                  placeholder="{{__('index.message')}}"></textarea>
+                                        <button class="mail-button comment-btn" type="submit">
+                                            {{__('index.login')}}
+                                        </button>
+                                    </form>
+                                    <textarea name="message" id="" cols="30" rows="10"
+                                              placeholder="{{__('index.message')}}"></textarea>
+                                    <button class="mail-button comment-btn" type="submit">
+                                        {{__('index.send')}}
+                                    </button>
+                                </div>
+                                @foreach($comments as $comment)
+
+                                    {{$comment->text}}
+
+                                @endforeach
                                 <p>{{ $home->title2 }}</p>
                             </div>
                             <div class="list_read_more_btn">
@@ -121,14 +152,24 @@
         <section class="wrapper">
             <div class="mailing_section">
                 <h3 class="general_min_title">{{__('index.send to mail ')}} </h3>
-                <form action="">
-                    <div class="inp_btn_mailing_block">
-                        <input type="text" class="inp_mailing" placeholder="{{__('index.Your email address')}} ">
-                        <input type="submit" class="btn_mailing" value="{{__('index.send')}} ">
+                <form action="{{ route('mail.send') }}" method="get">
+                    @csrf
+                    <div class="name_form_block">
+                        <input type="text" id="name" name="name" placeholder="{{__('index.name')}} *" required>
+                        <input type="text" id="fname" name="number" placeholder="{{__('index.number')}} *" required>
                     </div>
+                    <div class="phone_form_block">
+
+                        <input class="number_inp" type="email" name="email" placeholder="{{__('index.email')}} *">
+                    </div>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="{{__('index.message')}}"></textarea>
+                    <button class="mail-button" type="submit">
+                        {{__('index.send')}}
+                    </button>
                 </form>
             </div>
         </section>
     </main>
+
 
 @endsection
