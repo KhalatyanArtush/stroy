@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentStoreRequest;
+use App\Http\Requests\CommentUserStoreRequest;
 use App\Services\CommentService;
 use Illuminate\Http\Request;
 
@@ -19,12 +20,22 @@ class CommentController extends Controller
         $this->service = $service;
     }
 
-    public function store(CommentStoreRequest $request)
+    public function store(CommentUserStoreRequest $request)
     {
 
+        session()->put('verify', $request['email']);
+//        session()->flush();
+//        session()->forget('verify');
         $data = $request->validated();
         $this->service->store($data);
         return back()->with('index', 'Device has been deleted.');
 
+    }
+
+    public function commentStore(CommentStoreRequest $request){
+
+        $data = $request->validated();
+        $this->service->commentStore($data);
+        return back()->with('index', 'Device has been deleted.');
     }
 }

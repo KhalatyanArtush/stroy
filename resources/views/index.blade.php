@@ -73,7 +73,7 @@
                 <div class="releases_section_albom_block">
                     @foreach($services as $service)
                         <div class="releases_section_albom">
-                            <a href="">
+                            <a href="{{ route('singleServices', $service->id) }}">
                                 <div class="releases_section_albom_photo">
                                     <img src="{{ asset('ServiceHome/images/'.$service->image_path) }}" alt="">
                                     <div class="releases_hov">{{ $service->image_title }}</div>
@@ -92,53 +92,94 @@
                  style="background-image: url({{asset('Home/images/'.$home->image_path2)}});">
             <div class="wrapper">
                 <div class="upcoming_events_sections_block">
-                    <h3 class="general_min_title">Upcoming <span class="text_blue">events</span></h3>
+                    <h3 class="general_min_title">{{__('index.comments')}} </h3>
                     <div class="event_upcoming_list_block">
+
+                        @foreach($comments as $comment)
+
+
                         <div class="list_section_block">
                             <div class="list_info_block_left">
-                                <button class="mail-button" id="make-comment">
-                                    {{__('index.comments')}}
-                                </button>
-                                <div class="comments" style="display: none">
-                                    <form action="{{ route('registerComment.index') }}" method="post">
-                                        @csrf
-                                        <div class="name_form_block">
-                                            <input type="text" id="name" name="name"
-                                                   placeholder="{{__('index.name')}} *" required>
-                                        </div>
-                                        <div class="phone_form_block">
 
-                                            <input class="number_inp" type="email" name="email"
-                                                   placeholder="{{__('index.email')}} *">
-                                        </div>
-                                        <textarea name="message" id="" cols="30" rows="10"
-                                                  placeholder="{{__('index.message')}}"></textarea>
-                                        <button class="mail-button comment-btn" type="submit">
-                                            {{__('index.login')}}
-                                        </button>
-                                    </form>
-                                    <textarea name="message" id="" cols="30" rows="10"
-                                              placeholder="{{__('index.message')}}"></textarea>
-                                    <button class="mail-button comment-btn" type="submit">
-                                        {{__('index.send')}}
-                                    </button>
-                                </div>
-                                @foreach($comments as $comment)
+                                <p>{{$comment->comment_users_name}}</p>
 
-                                    {{$comment->text}}
 
-                                @endforeach
-                                <p>{{ $home->title2 }}</p>
                             </div>
                             <div class="list_read_more_btn">
+                                    <p>
+                                        {{$comment->text}}
+                                    </p>
                             </div>
                         </div>
-
+                        @endforeach
                     </div>
-
+                    <div class="all_events_list_btn_block">
+                        <button>
+                            <a href="">
+                                VIEW ALL DATES
+                            </a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+
+
+{{--        <button class="mail-button" id="make-comment">--}}
+{{--            {{__('index.add comments')}}--}}
+{{--        </button>--}}
+        {{--                                <div class="comments" style="display: none">--}}
+        {{--                                    @if(!$verify)--}}
+        {{--                                        <form action="{{ route('creatUser.store') }}" method="post">--}}
+        {{--                                            @csrf--}}
+        {{--                                            <div class="name_form_block">--}}
+        {{--                                                <input type="text" id="name" name="name" class="comment-input"--}}
+        {{--                                                       placeholder="{{__('index.name')}} *" required>--}}
+        {{--                                            </div>--}}
+        {{--                                            <div class="phone_form_block">--}}
+
+        {{--                                                <input class="comment-input number_inp" type="email" name="email"--}}
+        {{--                                                       placeholder="{{__('index.email')}} *">--}}
+        {{--                                            </div>--}}
+        {{--                                            <button class="mail-button comment-btn" type="submit">--}}
+        {{--                                                {{__('index.login')}}--}}
+        {{--                                            </button>--}}
+        {{--                                        </form>--}}
+        {{--                                    @else--}}
+        {{--                                        <form action="{{ route('creatComment.store') }}" method="post">--}}
+        {{--                                            @csrf--}}
+        {{--                                            <input type="hidden" id="name" name="id"--}}
+        {{--                                                   value="{{ $commentUser->id }}">--}}
+        {{--                                            <input type="hidden" id="name" name="name"--}}
+        {{--                                                   value="{{ $commentUser->name }}">--}}
+        {{--                                            <textarea name="text" id="" cols="30" rows="10"  class="comment-input"--}}
+        {{--                                                      placeholder="{{__('index.message')}}"></textarea>--}}
+        {{--                                            <button class="mail-button comment-btn" type="submit">--}}
+        {{--                                                {{__('index.send')}}--}}
+        {{--                                            </button>--}}
+        {{--                                        </form>--}}
+        {{--                                    @endif--}}
+        {{--                                </div>--}}
+
+
+{{--                                        @foreach($comments as $comment)--}}
+
+{{--                                                <p> {{$comment->comment_users_name}}</p>--}}
+{{--                                                <p> {{$comment->text}}</p>--}}
+{{--                                            @endforeach--}}
+        </div>
+
+
+
+
+
+
+
+
+
+
 
         <section class="jsingn_block" style="background-image: url({{asset('Home/images/'.$home->image_path3)}});">
             <div class="wrapper">

@@ -21,6 +21,19 @@ class CommentService
         ]);
     }
 
+
+    public function commentStore($data){
+
+        Comment::create([
+
+            'comment_users_id' => $data['id'],
+            'comment_users_name' => $data['name'],
+            'text' => $data['text'],
+        ]);
+
+    }
+
+
     public function update($home, $data)
     {
 

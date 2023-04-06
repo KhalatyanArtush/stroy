@@ -27,7 +27,8 @@ Route::get('/contacts', [App\Http\Controllers\ContactController::class, '__invok
 Route::get('/services', [App\Http\Controllers\OurServiceController::class, '__invoke'])->name('services');
 Route::get('/single-service/{service}', [App\Http\Controllers\OurServiceController::class, 'single'])->name('singleServices');
 
-Route::post('/comment', [App\Http\Controllers\CommentController::class, 'store'])->name('registerComment.index');
+Route::post('/commentUser-creat', [App\Http\Controllers\CommentController::class, 'store'])->name('creatUser.store');
+Route::post('/comment-creat', [App\Http\Controllers\CommentController::class, 'commentStore'])->name('creatComment.store');
 //Route::get('/service/creat', [App\Http\Controllers\Admin\ServiceController::class, 'creat'])->name('admin.service.creat');
 //Route::post('/service', [App\Http\Controllers\Admin\ServiceController::class, 'store'])->name('admin.service.store');
 //Route::get('/service/{service}', [App\Http\Controllers\Admin\ServiceController::class, 'show'])->name('admin.service.show');

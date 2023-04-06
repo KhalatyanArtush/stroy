@@ -383,7 +383,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: inherit;
-    padding: 110px 0;
+    padding: 20px 0px;
     text-align: center;
 }
 .upcoming_events_sections_block h3 {
@@ -406,13 +406,16 @@
     display: none;
   }
 .list_section_block {
-    padding-bottom: 39px;
+    padding: 16px 16px 39px 16px;
     width: 100%;
     margin-bottom: 34px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: #31c1b3;
+    border-radius: 30px;
 }
 .date_location_text_info_block {
     text-align: left;
@@ -440,24 +443,34 @@
     font-size: 14px;
     color: #FFFFFF;
 }
-.list_read_more_btn button {
+.list_read_more_btn {
     font-family: "montserrat_bold";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
     color: #FFFFFF;
-    width: 220px;
+    width: 80%;
     height: 60px;
 }
-.list_read_more_btn button svg {
-    margin-left: 18px;
-}
-.list_read_more_btn button:hover {
-    background-color: #21BEB3;
-    border: 1px solid #21BEB3;
-    color: #FFFFFF;
-}
+/*.list_read_more_btn button {*/
+/*    font-family: "montserrat_bold";*/
+/*    font-style: normal;*/
+/*    font-weight: 600;*/
+/*    font-size: 16px;*/
+/*    text-transform: uppercase;*/
+/*    color: #FFFFFF;*/
+/*    width: 220px;*/
+/*    height: 60px;*/
+/*}*/
+/*.list_read_more_btn button svg {*/
+/*    margin-left: 18px;*/
+/*}*/
+/*.list_read_more_btn button:hover {*/
+/*    background-color: #21BEB3;*/
+/*    border: 1px solid #21BEB3;*/
+/*    color: #FFFFFF;*/
+/*}*/
 .all_events_list_btn_block button {
     max-width: 320px;
     width: 100%;
@@ -683,3 +696,5 @@
     transition: all 300ms ease-in;
 }
 /* mailing_section section end */
+
+

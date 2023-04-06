@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/contact_plus_media.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index_media.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog_item_plus_media.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/single.scss') }}">
 </head>
 <body id="body">
 <div class="menu_burger" id="menu_burger">

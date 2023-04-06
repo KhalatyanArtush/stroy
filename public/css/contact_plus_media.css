@@ -66,6 +66,10 @@ textarea {
     color: white;
     border-radius: 5px;
 }
+.comment-input {
+    background-color: #b3efe9!important;
+    color: black!important;
+}
 .phone_form_block {
     margin: 15px 0;
 }

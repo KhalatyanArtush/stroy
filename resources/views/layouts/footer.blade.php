@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
     <div class="footer_top">
         <div class="wrapper">
             <div class="footer_top_block">
@@ -64,7 +64,6 @@
 <script src="{{ asset('js/script.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/slick.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/option.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/map.js') }}" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js" type="text/javascript"></script>
 </body>
 </html>
