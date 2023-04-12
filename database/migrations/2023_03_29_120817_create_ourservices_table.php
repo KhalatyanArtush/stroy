@@ -19,7 +19,6 @@ class CreateOurservicesTable extends Migration
             $table->string('title')->nullable();
             $table->text('text')->nullable();
             $table->string('image_path')->nullable();
-            $table->string('image_title')->nullable();
             $table->string('image_text')->nullable();
             $table->string('stock')->nullable();
             $table->timestamps();

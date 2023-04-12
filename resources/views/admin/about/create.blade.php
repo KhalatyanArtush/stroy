@@ -43,10 +43,10 @@
                         <input type="file" name="img" placeholder="first line..."/>
                     </div>
 
-                    <div class="input-box">
-                        <label for="img_logo">{{__('index.img logo')}}</label>
-                        <input type="file" name="img_logo" placeholder="first line..."/>
-                    </div>
+{{--                    <div class="input-box">--}}
+{{--                        <label for="img_logo">{{__('index.img logo')}}</label>--}}
+{{--                        <input type="file" name="img_logo" placeholder="first line..."/>--}}
+{{--                    </div>--}}
 
                     <div class="button-container">
                         <button type="submit" class="btn">{{__('index.Add')}}</button>

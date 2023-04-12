@@ -52,7 +52,6 @@ class Service
             'image_path_logo' => $newImageNameLogo,
             'title1' => $data['title1'],
             'title2' => $data['title2'],
-            'title3' => $data['title3'],
             'title_running' => $data['title_running'],
             'tel' => $data['tel'],
             'text' => $data['text'],
@@ -60,7 +59,6 @@ class Service
             'instagram' => $data['instagram'],
             'telegram' => $data['telegram'],
             'whatsapp' => $data['whatsapp'],
-            'twitter' => $data['twitter'],
 
         ]);
     }

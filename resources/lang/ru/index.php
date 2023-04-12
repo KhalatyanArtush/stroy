@@ -37,6 +37,7 @@ return [
     'address' => 'адрес',
     'city' => 'город',
     'street' => 'улица',
+    'time' => 'время работы',
     'building number' => 'номер здания',
     'name' => 'имя',
     'number' => 'номер',

@@ -25,7 +25,6 @@ class StoreRequest extends FormRequest
     {
         return [
             'img'=>'mimes:jpg,png,jpeg|max:5048',
-            'img_logo'=>'mimes:jpg,png,jpeg|max:5048',
             'title'=>'string',
             'text'=>'string|nullable',
             'text_down'=>'string|nullable',

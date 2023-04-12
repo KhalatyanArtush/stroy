@@ -13,42 +13,44 @@
         <div class="form-block">
 
 
-            <div>
-                <ul class="list-group list-group-horizontal">
-
-                    <li class="list-group-item">{{__('index.title')}}</li>
-                    <li class="list-group-item">{{__('index.text')}}</li>
-                    <li class="list-group-item">{{__('index.text_down')}}</li>
-                    <li class="list-group-item">{{__('index.img')}}</li>
-
-                </ul>
-
-                <div class="adminPosts">
+            <div class="list-group">
+                <div class="admin-list-group">
                     @if(isset($about))
-                        <div class="button-container">
-                            <button class="btn"> <a data-v-767ef7eb="" tabindex="0" href="{{ route('admin.about.show',$about->id) }}">{{__('index.Edit post')}}</a></button>
+                        <div class="admin-result">
+                            <p>{{__('index.title')}}</p>
+                            <p>{{  $about->title }}</p>
+
+                        </div>
+                        <div class="admin-result">
+                            <p>{{__('index.text')}}</p>
+                            <p>{{  $about->text }}</p>
+
+                        </div>
+                        <div class="admin-result">
+                            <p>{{__('index.text_down')}}</p>
+                            <p>{{  $about->text_down }}</p>
+
                         </div>
 
-                        <ul class="list-group list-group-horizontal-sm">
-
-                            <li class="list-group-item big-li">{{  $about->title }}</li>
-                            <li class="list-group-item big-li">{{  $about->text}}</li>
-                            <li class="list-group-item big-li">{{  $about->text_down}}</li>
-                            <li class="list-group-item big-li">   <img style="width: 200px; height: 200px;" src="{{ asset('About/images/'.$about->image_path) }}">
-                            </li>
-
-                        </ul>
+                        <div class="button-container">
+                            <button class="btn"><a data-v-767ef7eb="" tabindex="0"
+                                                   href="{{ route('admin.about.show',$about->id) }}">{{__('index.Edit post')}}</a>
+                            </button>
+                        </div>
                     @else
                         <div class="button-container">
-                            <button class="btn"> <a data-v-767ef7eb="" tabindex="0" href="{{ route('admin.about.creat') }}">{{__('index.Add post')}}</a></button>
+                            <button class="btn"><a data-v-767ef7eb="" tabindex="0"
+                                                   href="{{ route('admin.about.creat') }}">{{__('index.Add post')}}</a>
+                            </button>
                         </div>
-
                     @endif
+                    @if(isset($about))
+                        <img style="width: 200px; height: 200px;" src="{{ asset('About/images/'.$about->image_path) }}">
+                    @endif
+
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 @include('layouts.adminFooter')
 

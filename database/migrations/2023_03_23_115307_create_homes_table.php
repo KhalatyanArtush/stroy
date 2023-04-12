@@ -22,10 +22,8 @@ class CreateHomesTable extends Migration
             $table->string('image_path3')->nullable();
             $table->string('image_path_logo')->nullable();
             $table->string('title2')->nullable();
-            $table->string('title3')->nullable();
             $table->text('text')->nullable();
             $table->string('tel')->nullable();
-            $table->string('twitter')->nullable();
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->string('telegram')->nullable();

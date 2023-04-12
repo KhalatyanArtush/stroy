@@ -13,6 +13,7 @@ class Service
         Contact::create([
             'tel' => $data['tel'],
             'email' => $data['email'],
+            'time' => $data['time'],
             'address' => $data['address'],
             'city' => $data['city'],
             'street' => $data['street'],
@@ -26,6 +27,7 @@ class Service
             $about->update([
                 'tel' => $data['tel'],
                 'email' => $data['email'],
+                'time' => $data['time'],
                 'address' => $data['address'],
                 'city' => $data['city'],
                 'street' => $data['street'],

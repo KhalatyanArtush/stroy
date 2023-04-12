@@ -13,31 +13,52 @@
         <div class="form-block">
 
 
-            <div>
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item">{{__('index.title')}}</li>
-                    <li class="list-group-item">{{__('index.text')}}</li>
-                    <li class="list-group-item">{{__('index.text_down')}}</li>
-                    <li class="list-group-item">{{__('index.img')}}</li>
-                </ul>
-
-                <div class="adminPosts">
+            <div class="list-group">
+                <div class="admin-list-group">
                     @if(isset($contact))
-                        <a data-v-767ef7eb="" tabindex="0" href="{{ route('admin.contact.show',$contact->id) }}">{{__('index.Edit post')}}</a>
-                        <ul class="list-group list-group-horizontal-sm">
+                    <div class="admin-result">
+                        <p>{{__('index.Tel')}}</p>  <p>{{  $contact->tel }}</p>
 
-                            <li class="list-group-item big-li">{{  $contact->tel }}</li>
-                            <li class="list-group-item big-li">{{  $contact->email}}</li>
-                            <li class="list-group-item big-li">{{  $contact->address}}</li>
-                            <li class="list-group-item big-li">{{  $contact->city}}</li>
-                            <li class="list-group-item big-li">{{  $contact->street}}</li>
-                            <li class="list-group-item big-li">{{  $contact->number}}</li>
-                        </ul>
+                    </div>
+                    <div class="admin-result">
+                        <p>{{__('index.email')}}</p>  <p>{{  $contact->email }}</p>
+
+                    </div>
+                    <div class="admin-result">
+                        <p>{{__('index.time')}}</p>   <p>{{  $contact->time }}</p>
+
+                    </div>
+                    <div class="admin-result">
+                        <p>{{__('index.address')}}</p>   <p>{{  $contact->address }}</p>
+
+                    </div>
+                    <div class="admin-result">
+                        <p>{{__('index.city')}}</p>   <p>{{  $contact->city }}</p>
+
+                    </div>
+                    <div class="admin-result">
+                        <p>{{__('index.street')}}</p>   <p>{{  $contact->street }}</p>
+
+                    </div>
+                    <div class="admin-result">
+                        <p>{{__('index.number')}}</p>   <p>{{  $contact->number }}</p>
+
+                    </div>
+
+                        <div class="button-container">
+                            <button class="btn"><a data-v-767ef7eb="" tabindex="0"
+                                                   href="{{ route('admin.contact.show',$contact->id) }}">{{__('index.Edit post')}}</a>
+                            </button>
+                        </div>
                     @else
-                        <a data-v-767ef7eb="" tabindex="0" href="{{ route('admin.contact.creat') }}">{{__('index.Add post')}}</a>
+                        <div class="button-container">
+                            <button class="btn"><a data-v-767ef7eb="" tabindex="0"
+                                                   href="{{ route('admin.contact.creat') }}">{{__('index.Add post')}}</a>
+                            </button>
+                        </div>
                     @endif
+
                 </div>
-            </div>
         </div>
     </div>
 </div>

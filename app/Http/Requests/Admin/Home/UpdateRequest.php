@@ -30,7 +30,6 @@ class UpdateRequest extends FormRequest
             'img_logo'=>'max:5048|nullable',
             'title1'=>'string|nullable',
             'title2'=>'string|nullable',
-            'title3'=>'string|nullable',
             'title_running'=>'string|nullable',
             'text'=>'string|nullable',
             'tel'=>'string|nullable',
@@ -38,7 +37,6 @@ class UpdateRequest extends FormRequest
             'instagram'=>'string|nullable',
             'telegram'=>'string|nullable',
             'whatsapp'=>'string|nullable',
-            'twitter'=>'string|nullable',
         ];
     }
 }

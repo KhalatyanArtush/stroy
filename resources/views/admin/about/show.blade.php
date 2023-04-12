@@ -47,12 +47,12 @@
                     <input type="file" name="img" placeholder="first line..."/>
                 </div>
 
-                <div class="input-box">
-                    <label for="image_path_logo">{{__('index.img logo')}}</label>
-                    <img style="width: 200px; height: 200px;" src="{{ asset('About/images/'.$about->image_path_logo) }}">
-                    {{--                    <label for="first">{{__('index.Add img')}}</label>--}}
-                    <input type="file" name="img_logo" placeholder="first line..."/>
-                </div>
+{{--                <div class="input-box">--}}
+{{--                    <label for="image_path_logo">{{__('index.img logo')}}</label>--}}
+{{--                    <img style="width: 200px; height: 200px;" src="{{ asset('About/images/'.$about->image_path_logo) }}">--}}
+{{--                    --}}{{--                    <label for="first">{{__('index.Add img')}}</label>--}}
+{{--                    <input type="file" name="img_logo" placeholder="first line..."/>--}}
+{{--                </div>--}}
 
 
                 <div class="button-container">

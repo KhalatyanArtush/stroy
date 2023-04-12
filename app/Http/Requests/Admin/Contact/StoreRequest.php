@@ -26,6 +26,7 @@ class StoreRequest extends FormRequest
         return [
             'tel'=>'string|nullable',
             'email'=>'string|nullable',
+            'time'=>'string|nullable',
             'address'=>'string|nullable',
             'city'=>'string|nullable',
             'street'=>'string|nullable',
