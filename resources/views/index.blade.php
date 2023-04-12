@@ -35,13 +35,13 @@
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M18.2327 0.605469H6.76726C3.03573 0.605469 0 3.48142 0 7.01656V17.8787C0 21.4137 3.03573 24.2896 6.76726 24.2896H18.2329C21.9642 24.2896 25 21.4137 25 17.8787V7.01656C25 3.48142 21.9642 0.605469 18.2327 0.605469V0.605469ZM23.5343 17.8787C23.5343 20.6481 21.1561 22.9012 18.2327 22.9012H6.76726C3.84387 22.9012 1.4656 20.6481 1.4656 17.8787V7.01656C1.4656 4.24703 3.84387 1.99394 6.76726 1.99394H18.2329C21.1561 1.99394 23.5343 4.24703 23.5343 7.01656V17.8787Z"
-                                fill="white"/>
+                                fill="#3e516b"/>
                             <path
                                 d="M12.4998 5.97168C8.7305 5.97168 5.66406 8.87673 5.66406 12.4476C5.66406 16.0185 8.7305 18.9236 12.4998 18.9236C16.2691 18.9236 19.3355 16.0185 19.3355 12.4476C19.3355 8.87673 16.2691 5.97168 12.4998 5.97168ZM12.4998 17.5351C9.53883 17.5351 7.12967 15.2529 7.12967 12.4476C7.12967 9.64252 9.53883 7.36015 12.4998 7.36015C15.4609 7.36015 17.8699 9.64252 17.8699 12.4476C17.8699 15.2529 15.4609 17.5351 12.4998 17.5351Z"
-                                fill="white"/>
+                                fill="#3e516b"/>
                             <path
                                 d="M19.4994 3.67188C18.3855 3.67188 17.4795 4.53036 17.4795 5.58544C17.4795 6.64071 18.3855 7.49919 19.4994 7.49919C20.6133 7.49919 21.5194 6.64071 21.5194 5.58544C21.5194 4.53018 20.6133 3.67188 19.4994 3.67188ZM19.4994 6.11055C19.1938 6.11055 18.9451 5.87492 18.9451 5.58544C18.9451 5.29579 19.1938 5.06034 19.4994 5.06034C19.8051 5.06034 20.0538 5.29579 20.0538 5.58544C20.0538 5.87492 19.8051 6.11055 19.4994 6.11055Z"
-                                fill="white"/>
+                                fill="#3e516b"/>
                         </svg>
                     </a>
                     <a href="{{ $home->telegram }}" target="_blank">
@@ -69,55 +69,113 @@
                      direction="left">{{ $home->title_running }}</marquee>
         </section>
         <section class="wrapper">
-            <div class="releases_section">
-                <div class="releases_section_albom_block">
+
+
+            <div class="makeup_things_presentation">
+                <div class="makeup_catalog_item_block">
                     @foreach($services as $service)
-                        <div class="releases_section_albom">
-                            <a href="{{ route('singleServices', $service->id) }}">
-                                <div class="releases_section_albom_photo">
+                        <a href="{{ route('singleServices', $service->id) }}">
+                            <div class="catalog_product_item_block">
+                                <div class="catalog_product_item_block_img">
                                     <img src="{{ asset('ServiceHome/images/'.$service->image_path) }}" alt="">
                                     <div class="releases_hov">{{ $service->image_title }}</div>
                                 </div>
-                                <div class="releases_section_albom_name_block">
-                                    <p>{{ $service->image_text }}</p>
-                                    {{--                                    <span>2017</span>--}}
-                                </div>
-                            </a>
-                        </div>
+                            </div>
+                            <div class="releases_section_albom_name_block">
+                                <p>{{ $service->image_text }}</p>
+                                {{--                                    <span>2017</span>--}}
+                            </div>
+                        </a>
                     @endforeach
                 </div>
             </div>
+
+
+{{--            <div class="releases_section">--}}
+{{--                <div class="releases_section_albom_block">--}}
+{{--                    @foreach($services as $service)--}}
+{{--                        <div class="releases_section_albom">--}}
+{{--                            <a href="{{ route('singleServices', $service->id) }}">--}}
+{{--                                <div class="releases_section_albom_photo">--}}
+{{--                                    <img src="{{ asset('ServiceHome/images/'.$service->image_path) }}" alt="">--}}
+{{--                                    <div class="releases_hov">{{ $service->image_title }}</div>--}}
+{{--                                </div>--}}
+{{--                                <div class="releases_section_albom_name_block">--}}
+{{--                                    <p>{{ $service->image_text }}</p>--}}
+{{--                                    --}}{{--                                    <span>2017</span>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </section>
         <section class="upcoming_events_block"
                  style="background-image: url({{asset('Home/images/'.$home->image_path2)}});">
             <div class="wrapper">
                 <div class="upcoming_events_sections_block">
                     <h3 class="general_min_title">{{__('index.comments')}} </h3>
+                    <div class="all_events_list_btn_block" style="padding-bottom: 30px">
+                        <button id="make-comment" onclick="myFunction()">
+                            {{__('index.add comments')}}
+                        </button>
+                    </div>
+                    <div class="comments" style="display: none; padding-bottom: 30px;">
+                        @if(!$verify)
+                            {{--                            <form action="{{ route('creatUser.store') }}" method="post">--}}
+                            <form id="creatCommentUser" action="javascript:void(0)">
+                                @csrf
+                                <div class="name_form_block">
+                                    <input type="text" id="name" name="name" class="comment-input"
+                                           placeholder="{{__('index.name')}} *" required>
+                                </div>
+                                <div class="phone_form_block">
+
+                                    <input class="comment-input number_inp" id="email" type="email" name="email"
+                                           placeholder="{{__('index.email')}} *">
+                                </div>
+                                <button class="mail-button comment-btn" id="register" type="submit">
+                                    {{__('index.login')}}
+                                </button>
+                            </form>
+                        @else
+                            <form id="creatComments" action="javascript:void(0)" style="padding-bottom: 30px">
+                                @csrf
+                                <input type="hidden" id="name" name="id"
+                                       value="{{ $commentUser->id }}">
+                                <input type="hidden" id="name" name="name"
+                                       value="{{ $commentUser->name }}">
+                                <textarea name="text" id="" cols="30" rows="10" class="comment-input"
+                                          placeholder="{{__('index.message')}}" required></textarea>
+                                <button class="mail-button comment-btn" id="creatComment" type="submit">
+                                    {{__('index.send')}}
+                                </button>
+                            </form>
+                        @endif
+                    </div>
                     <div class="event_upcoming_list_block">
 
                         @foreach($comments as $comment)
 
 
-                        <div class="list_section_block">
-                            <div class="list_info_block_left">
+                            <div class="list_section_block">
+                                <div class="list_info_block_left">
 
-                                <p>{{$comment->comment_users_name}}</p>
+                                    <p>{{$comment->comment_users_name}}</p>
 
 
-                            </div>
-                            <div class="list_read_more_btn">
+                                </div>
+                                <div class="list_read_more_btn">
                                     <p>
                                         {{$comment->text}}
                                     </p>
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                     <div class="all_events_list_btn_block">
-                        <button>
-                            <a href="">
-                                VIEW ALL DATES
-                            </a>
+                        <button id="more">
+                            {{__('index.more')}}
                         </button>
                     </div>
                 </div>
@@ -125,61 +183,79 @@
         </section>
 
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#register').on('click', function () {
+
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ route('creatUser.store') }}",
+                        data: $('#creatCommentUser').serialize(),
+                        success: function (response) {
+                        },
+                    })
+                    location.reload();
+                });
+
+                $('#creatComment').on('click', function () {
+
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ route('creatComment.store') }}",
+                        data: $('#creatComments').serialize(),
+                        success: function (response) {
+                        },
+                    })
+                    location.reload();
+                });
 
 
-{{--        <button class="mail-button" id="make-comment">--}}
-{{--            {{__('index.add comments')}}--}}
-{{--        </button>--}}
-        {{--                                <div class="comments" style="display: none">--}}
-        {{--                                    @if(!$verify)--}}
-        {{--                                        <form action="{{ route('creatUser.store') }}" method="post">--}}
-        {{--                                            @csrf--}}
-        {{--                                            <div class="name_form_block">--}}
-        {{--                                                <input type="text" id="name" name="name" class="comment-input"--}}
-        {{--                                                       placeholder="{{__('index.name')}} *" required>--}}
-        {{--                                            </div>--}}
-        {{--                                            <div class="phone_form_block">--}}
+                var site_url = "{{ route('index') }}";
+                var page = 1;
 
-        {{--                                                <input class="comment-input number_inp" type="email" name="email"--}}
-        {{--                                                       placeholder="{{__('index.email')}} *">--}}
-        {{--                                            </div>--}}
-        {{--                                            <button class="mail-button comment-btn" type="submit">--}}
-        {{--                                                {{__('index.login')}}--}}
-        {{--                                            </button>--}}
-        {{--                                        </form>--}}
-        {{--                                    @else--}}
-        {{--                                        <form action="{{ route('creatComment.store') }}" method="post">--}}
-        {{--                                            @csrf--}}
-        {{--                                            <input type="hidden" id="name" name="id"--}}
-        {{--                                                   value="{{ $commentUser->id }}">--}}
-        {{--                                            <input type="hidden" id="name" name="name"--}}
-        {{--                                                   value="{{ $commentUser->name }}">--}}
-        {{--                                            <textarea name="text" id="" cols="30" rows="10"  class="comment-input"--}}
-        {{--                                                      placeholder="{{__('index.message')}}"></textarea>--}}
-        {{--                                            <button class="mail-button comment-btn" type="submit">--}}
-        {{--                                                {{__('index.send')}}--}}
-        {{--                                            </button>--}}
-        {{--                                        </form>--}}
-        {{--                                    @endif--}}
-        {{--                                </div>--}}
+                $('#more').on('click', function () {
+                    page++;
+                    load_more(page);
+
+                    function load_more(page) {
+                        $.ajax({
+                            url: site_url + "?page=" + page,
+                            type: "get",
+                            datatype: "html",
+                            beforeSend: function () {
+                                $('.list_section_block').show();
+                            }
+                        })
+                            .done(function (data) {
+                                if (data.length == 0) {
+                                    $('#more').css('display', 'none');
+                                    return;
+                                }
+                                $(".event_upcoming_list_block").append(data);
+                            })
+                            .fail(function (jqXHR, ajaxOptions, thrownError) {
+                                alert('No response from server');
+                            });
+                    }
 
 
-{{--                                        @foreach($comments as $comment)--}}
+                });
 
-{{--                                                <p> {{$comment->comment_users_name}}</p>--}}
-{{--                                                <p> {{$comment->text}}</p>--}}
-{{--                                            @endforeach--}}
-        </div>
-
-
-
-
-
-
-
-
-
-
+            });
+        </script>
 
         <section class="jsingn_block" style="background-image: url({{asset('Home/images/'.$home->image_path3)}});">
             <div class="wrapper">
@@ -191,8 +267,8 @@
             </div>
         </section>
         <section class="wrapper">
-            <div class="mailing_section">
-                <h3 class="general_min_title">{{__('index.send to mail ')}} </h3>
+            <div class="mailing_section comments">
+                <h3 id="mail-title" class="general_min_title">{{__('index.send to mail ')}} </h3>
                 <form action="{{ route('mail.send') }}" method="get">
                     @csrf
                     <div class="name_form_block">

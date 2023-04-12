@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -28,6 +30,11 @@ Route::get('/services', [App\Http\Controllers\OurServiceController::class, '__in
 Route::get('/single-service/{service}', [App\Http\Controllers\OurServiceController::class, 'single'])->name('singleServices');
 
 Route::post('/commentUser-creat', [App\Http\Controllers\CommentController::class, 'store'])->name('creatUser.store');
+//Route::post('/commentUser-creat', function (){
+//    if (Request::ajax()){
+//        return Response::json(Request::all());
+//    }
+//})->name('creatUser.store');
 Route::post('/comment-creat', [App\Http\Controllers\CommentController::class, 'commentStore'])->name('creatComment.store');
 //Route::get('/service/creat', [App\Http\Controllers\Admin\ServiceController::class, 'creat'])->name('admin.service.creat');
 //Route::post('/service', [App\Http\Controllers\Admin\ServiceController::class, 'store'])->name('admin.service.store');
@@ -46,7 +53,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     Route::get('/home/{home}', [App\Http\Controllers\Admin\HomeController::class, 'show'])->name('admin.home.show');
     Route::get('/home/{home}/edit', [App\Http\Controllers\Admin\HomeController::class, 'edit'])->name('admin.home.edit');
     Route::patch('/home/{home}', [App\Http\Controllers\Admin\HomeController::class, 'update'])->name('admin.home.update');
-    Route::delete('/home/{home}', [App\Http\Controllers\Admin\HomeController::class, 'delete'])->name('admin.home.delete');
+//    Route::delete('/home/{home}', [App\Http\Controllers\Admin\HomeController::class, 'delete'])->name('admin.home.delete');
 
     Route::get('/about', [App\Http\Controllers\Admin\AboutController::class, 'index'])->name('admin.about.index');
     Route::get('/about/creat', [App\Http\Controllers\Admin\AboutController::class, 'creat'])->name('admin.about.creat');
@@ -54,7 +61,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     Route::get('/about/{about}', [App\Http\Controllers\Admin\AboutController::class, 'show'])->name('admin.about.show');
     Route::get('/about/{about}/edit', [App\Http\Controllers\Admin\AboutController::class, 'edit'])->name('admin.about.edit');
     Route::patch('/about/{about}', [App\Http\Controllers\Admin\AboutController::class, 'update'])->name('admin.about.update');
-    Route::delete('/about/{about}', [App\Http\Controllers\Admin\AboutController::class, 'delete'])->name('admin.about.delete');
+//    Route::delete('/about/{about}', [App\Http\Controllers\Admin\AboutController::class, 'delete'])->name('admin.about.delete');
 
     Route::get('/contact', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
     Route::get('/contact/creat', [App\Http\Controllers\Admin\ContactController::class, 'creat'])->name('admin.contact.creat');
@@ -62,7 +69,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     Route::get('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'show'])->name('admin.contact.show');
     Route::get('/contact/{contact}/edit', [App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('admin.contact.edit');
     Route::patch('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
-    Route::delete('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'delete'])->name('admin.contact.delete');
+//    Route::delete('/contact/{contact}', [App\Http\Controllers\Admin\ContactController::class, 'delete'])->name('admin.contact.delete');
 
     Route::get('/services', [App\Http\Controllers\Admin\ServiceController::class, 'index'])->name('admin.services.index');
     Route::get('/service/creat', [App\Http\Controllers\Admin\ServiceController::class, 'creat'])->name('admin.service.creat');

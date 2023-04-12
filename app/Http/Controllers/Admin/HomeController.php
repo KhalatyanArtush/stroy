@@ -62,19 +62,19 @@ class HomeController extends Controller
 
     }
 
-    public function delete(Home $home)
-    {
-//        xndir ka 1 nkari bacakayutyan depqum errora talis
-        $image_path1 = "Home/images/".$home->image_path1;
-        $image_path2 = "Home/images/".$home->image_path2;
-        $image_path3 = "Home/images/".$home->image_path3;
-        $image_path_logo = "Home/images/".$home->image_path_logo;
-        unlink($image_path1);
-        unlink($image_path2);
-        unlink($image_path3);
-        unlink($image_path_logo);
-        $home->delete();
-        return redirect()->route('admin.home.index');
-    }
+//    public function delete(Home $home)
+//    {
+////        xndir ka 1 nkari bacakayutyan depqum errora talis
+//        $image_path1 = "Home/images/".$home->image_path1;
+//        $image_path2 = "Home/images/".$home->image_path2;
+//        $image_path3 = "Home/images/".$home->image_path3;
+//        $image_path_logo = "Home/images/".$home->image_path_logo;
+//        unlink($image_path1);
+//        unlink($image_path2);
+//        unlink($image_path3);
+//        unlink($image_path_logo);
+//        $home->delete();
+//        return redirect()->route('admin.home.index');
+//    }
 }
 

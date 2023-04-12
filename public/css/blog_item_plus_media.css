@@ -274,7 +274,7 @@ lick-slider .slick-track,
     font-family: "montserrat_bold";
     margin-bottom: 48px;
     font-size: 45px;
-    background: -webkit-linear-gradient(left ,#21BEB3, white);
+    background: -webkit-linear-gradient(left ,#3e516b, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -303,7 +303,7 @@ lick-slider .slick-track,
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
-    color: #FFFFFF;
+    color: #3e516b;
     margin-bottom: 40px;
 }
 .item_btn_block button {
@@ -346,7 +346,7 @@ lick-slider .slick-track,
     transition: all 300ms ease-out;
 }
 .item_share_block a:hover svg path {
-    fill: #21BEB3;
+    fill: white;
     transition: all 300ms ease-in;
 }
 .for_media {

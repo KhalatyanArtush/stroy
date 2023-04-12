@@ -62,10 +62,10 @@ class ContactController extends Controller
 
     }
 
-    public function delete(Contact $contact)
-    {
-        $contact->delete();
-        return redirect()->route('admin.contact.index');
-    }
+//    public function delete(Contact $contact)
+//    {
+//        $contact->delete();
+//        return redirect()->route('admin.contact.index');
+//    }
 }
 

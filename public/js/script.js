@@ -1,27 +1,27 @@
-$(document).ready(function(){
-    $(window).scroll(function() {
-        if ($(this).scrollTop()>100)
-        {
-        $('#header').fadeOut();
-        }
-        else
-        {
-        $('#header').fadeIn();
-        }
-    });
-    $(window).scroll(function() {
-        clearTimeout($.data(this, 'scrollTimer'));
-        $.data(this, 'scrollTimer', setTimeout(function() {
-        $('#header').fadeIn();
-        }, 250));
-    });
-
-    $(".next_releases_btn").click(function(){
-        $(".releases_section_albom:first").hide("low");
-     });
-
-
-});
+// $(document).ready(function(){
+//     $(window).scroll(function() {
+//         if ($(this).scrollTop()>100)
+//         {
+//         $('#header').fadeOut();
+//         }
+//         else
+//         {
+//         $('#header').fadeIn();
+//         }
+//     });
+//     $(window).scroll(function() {
+//         clearTimeout($.data(this, 'scrollTimer'));
+//         $.data(this, 'scrollTimer', setTimeout(function() {
+//         $('#header').fadeIn();
+//         }, 250));
+//     });
+//
+//     $(".next_releases_btn").click(function(){
+//         $(".releases_section_albom:first").hide("low");
+//      });
+//
+//
+// });
 
 
 
@@ -57,7 +57,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-$( "#make-comment" ).click(function() {
+function myFunction() {
     $('.comments').css('display','block');
     $('#make-comment').css('display','none');
-});
+}
+
+// $( "#make-comment" ).click(function() {
+//     $('.comments').css('display','block');
+//     $('#make-comment').css('display','none');
+// });

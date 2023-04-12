@@ -25,13 +25,13 @@
 a {
     text-decoration: none;
     transition: all 300ms ease-out;
-    color: white;
+    color: #3e516b;
 }
 a:hover {
     transition: all 300ms ease-in;
 }
 body {
-    background-color: black;
+    background-color: #c3d7eb;
     min-width: 280px;
     max-width: 1920px;
     margin-left: auto;
@@ -40,10 +40,10 @@ body {
 }
 body::-webkit-scrollbar {
     width: 14px;
-    background-color: #3F3F3F;
+    background-color: #3e516b;
 }
 body::-webkit-scrollbar-thumb {
-    background: #21BEB3;
+    background: #c3d7eb;
     border-radius: 20px;
 }
 .overflow {
@@ -62,8 +62,8 @@ button:hover {
 .mail-button{
     width: 220px;
     height: 60px;
-    background-color: #21BEB3;
-    border: 1px solid #21BEB3;
+    background-color: #3e516b;
+    border: 1px solid white;
     font-family: "montserrat_bold";
     font-style: normal;
     font-weight: 600;
@@ -77,9 +77,10 @@ button:hover {
     border-radius: 5px;
 }
 .mail-button:hover{
-    background-color: transparent;
-    border: 1px solid #21BEB3;
-    color: #FFFFFF;
+    /*background-color: transparent;*/
+    background-color: #c4d8ea;
+    border: 2px solid #3e516b;
+    color: #3e516b;
     transition: all 300ms ease-in;
 }
 img {
@@ -96,11 +97,17 @@ img {
     font-style: normal;
     font-weight: bold;
     font-size: 65px;
-    color: #FFFFFF;
+    color: white;
     margin-bottom: 23px;
 }
+#comment-a{
+    color: white;
+}
+#mail-title{
+    color: #3e516b;
+}
 .text_blue {
-    color: #21BEB3;
+    color: #c19d1a;
 }
 button {
     background-color: transparent;
@@ -172,7 +179,7 @@ button {
     align-items: center;
 }
 .menu_navbar_burger a:hover {
-    color: #21BEB3;
+    color: #c19d1a;
 }
 .burger_menu_left_right_section {
     display: flex;
@@ -224,6 +231,7 @@ button {
 
 /* header section */
 header {
+    background-color: #3d506d;
     max-width: 1920px;
     width: 100%;
     height: auto;
@@ -259,7 +267,7 @@ header {
 }
 .nav_bar_block a:hover {
     /*text-decoration-line: line-through;*/
-    color: #32f3e2;
+    color: #c4d8ea;
 }
 .nav_bar_block_active {
     text-decoration-line: line-through;
@@ -277,7 +285,7 @@ header {
     color: #FFFFFF;
 }
 .lang_block a:hover {
-    text-decoration-line: line-through;
+    color: #c4d8ea;
 }
 .lang_block_active {
     text-decoration-line: line-through;
@@ -290,6 +298,11 @@ header {
 /* header section end */
 
 /* footer section */
+footer {
+    background-color:  #3d506d;
+}
+
+
 .footer_top {
     margin-bottom: 55px;
 }
@@ -320,7 +333,7 @@ header {
     transition: all 300ms ease-out;
 }
 .footer_icon_block a:hover svg path {
-    fill: #21BEB3;
+    fill: white;
     transition: all 300ms ease-in;
 }
 
@@ -339,7 +352,7 @@ header {
     font-style: normal;
     font-weight: 275;
     font-size: 19px;
-    color: #FFFFFF;
+    color: #c4d8ea;
 }
 .website_design_block {
     display: flex;
@@ -378,19 +391,21 @@ header {
     position: absolute;
     opacity: 0;
     transition: all 300ms ease-out;
-    background-color: rgba(33, 190, 179, 0.4);
+    background-color: rgb(62 81 107 / 36%);
 }
 .releases_section_albom_photo {
     position: relative;
     width: 398px;
     height: 398px;
+    border-bottom: 4px solid #3e516b;
+    border-right: 4px solid #3e516b;
 }
 .releases_section_albom_name_block p {
     font-family: "montserrat_bold";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
-    color: #FFFFFF;
+    color: #3e516b;
     margin-top: 25px;
     margin-bottom: 6px;
 }
@@ -435,7 +450,7 @@ header {
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
-    color: #FFFFFF;
+    color: #3e516b;
     margin-bottom: 19px;
 }
 .text_title_info_block span {
@@ -443,7 +458,7 @@ header {
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
-    color: #FFFFFF;
+    color: #3e516b;
 }
 .interview_date_block {
     display: flex;
@@ -497,7 +512,7 @@ header {
     font-size: 100px;
     text-transform: uppercase;
     margin-bottom: 12px;
-    background: -webkit-linear-gradient(left ,#21BEB3, white);
+    background: -webkit-linear-gradient(left ,#3e516b, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -577,4 +592,12 @@ header {
     background-color: #22BEB3!important;
     color: black!important;
 }
+
+.splide__pagination__page.is-active {
+    background : #3e516b!important;
+}
+.splide__arrow {
+    background: #3e516b!important;
+}
+
 /* pagination block end */

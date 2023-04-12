@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Home page</title>
     <link rel="stylesheet" href="{{ asset('css/_global.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/contact_plus_media.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index_media.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog_item_plus_media.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slide.css') }}">
 </head>
 <body id="body">
 <div class="menu_burger" id="menu_burger">

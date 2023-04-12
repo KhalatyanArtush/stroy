@@ -24,14 +24,14 @@
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
-    color: #22BEB3;
+    color: #3e516b;
 }
 .back_info_block p {
     font-family: "montserrat_light";
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
-    color: #22BEB3;
+    color: #3e516b;
 }
 .contact_form_map_block {
     display: flex;
@@ -52,7 +52,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
-    color: #FFFFFF;
+    color: #3e516b;
 }
 textarea {
     padding: 20px;
@@ -61,15 +61,15 @@ textarea {
     background-color: transparent;
     resize: none;
     font-size: 16px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #3e516b;
     box-sizing: border-box;
-    color: white;
+    color: #3e516b;
     border-radius: 5px;
 }
-.comment-input {
-    background-color: #b3efe9!important;
-    color: black!important;
-}
+/*.comment-input {*/
+/*    background-color: #b3efe9!important;*/
+/*    color: black!important;*/
+/*}*/
 .phone_form_block {
     margin: 15px 0;
 }
@@ -85,10 +85,10 @@ textarea {
     max-width: 1000px;
     width: 100%;
     height: 56px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #3e516b;
     box-sizing: border-box;
     border-radius: 5px;
-    color: white;
+    color: #3e516b;
     font-size: 16px;
 }
 .phone_form_block {
@@ -101,10 +101,10 @@ textarea {
     background-color: transparent;
     width: 100%;
     height: 56px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #3e516b;
     box-sizing: border-box;
     border-radius: 5px;
-    color: white;
+    color: #3e516b;
     font-size: 16px;
 }
 .number_inp::-webkit-outer-spin-button,
@@ -122,8 +122,8 @@ textarea {
 .contact_form_blok button input {
     width: 220px;
     height: 60px;
-    background-color: #21BEB3;
-    border: 1px solid #21BEB3;
+    background-color: #3e516b;
+    border: 1px solid white;
     font-family: "montserrat_bold";
     font-style: normal;
     font-weight: 600;
@@ -138,8 +138,8 @@ textarea {
 }
 .contact_form_blok button input:hover {
     background-color: transparent;
-    border: 1px solid #21BEB3;
-    color: #FFFFFF;
+    border: 1px solid #3e516b;
+    color: #3e516b;
     transition: all 300ms ease-in;
 }
 .ymaps-2-1-78-map {
